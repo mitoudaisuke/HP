@@ -44,6 +44,7 @@ form?.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = form.querySelector('button[type="submit"]');
   const success = document.getElementById('form-success');
+  const defaultText = btn?.dataset.defaultText || btn?.textContent || 'Send';
   btn.textContent = 'Sending...';
   btn.disabled = true;
   try {
@@ -61,6 +62,6 @@ form?.addEventListener('submit', async (e) => {
   } catch {
     alert('Network error. Please try again.');
   }
-  btn.textContent = 'Send Message';
+  btn.textContent = defaultText;
   btn.disabled = false;
 });
