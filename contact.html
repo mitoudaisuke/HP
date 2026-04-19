@@ -121,7 +121,8 @@
       </div>
 
       <div class="contact-form-card fade-up">
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xaqajlay" method="POST">
+          <input type="hidden" name="_subject" value="New NIRFI inquiry from toaoptics.com" />
           <div class="form-group">
             <label for="inquiry-type">Inquiry Type <span class="req">*</span></label>
             <select id="inquiry-type" name="inquiry_type" required>
@@ -188,6 +189,7 @@
           <p class="form-privacy">For demo, distributor, or collaboration inquiries, we may follow up by email to confirm region, intended use, and preferred meeting format.</p>
 
           <button type="submit" class="btn btn-primary" data-default-text="Send Inquiry" style="width:100%; justify-content:center;">Send Inquiry</button>
+          <div id="form-error" class="form-error" role="alert"></div>
           <div id="form-success" class="form-success">
             Thank you. Your inquiry has been sent. We typically reply within 3 business days.
           </div>

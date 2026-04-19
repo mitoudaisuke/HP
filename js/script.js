@@ -44,7 +44,13 @@ form?.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = form.querySelector('button[type="submit"]');
   const success = document.getElementById('form-success');
+  const error = document.getElementById('form-error');
   const defaultText = btn?.dataset.defaultText || btn?.textContent || 'Send';
+  if (success) { success.style.display = 'none'; }
+  if (error) {
+    error.style.display = 'none';
+    error.textContent = '';
+  }
   btn.textContent = 'Sending...';
   btn.disabled = true;
   try {
@@ -57,10 +63,18 @@ form?.addEventListener('submit', async (e) => {
       form.reset();
       if (success) { success.style.display = 'block'; }
     } else {
-      alert('Something went wrong. Please try again.');
+      const data = await res.json().catch(() => null);
+      const message = data?.errors?.map((item) => item.message).join(' ') || 'Something went wrong. Please try again.';
+      if (error) {
+        error.textContent = message;
+        error.style.display = 'block';
+      }
     }
   } catch {
-    alert('Network error. Please try again.');
+    if (error) {
+      error.textContent = 'Network error. Please try again.';
+      error.style.display = 'block';
+    }
   }
   btn.textContent = defaultText;
   btn.disabled = false;
