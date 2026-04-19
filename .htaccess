@@ -1,1 +1,13 @@
-#aaa
+RewriteEngine On
+
+# Canonical static page URLs
+RedirectMatch 301 ^/nirfi/?$ /nirfi.html
+RedirectMatch 301 ^/company/?$ /about.html
+RedirectMatch 301 ^/contact/?$ /contact.html
+RedirectMatch 301 ^/news/?$ /news.html
+
+# Japanese aliases
+RedirectMatch 301 ^/jp/nirfi/?$ /jp/nirfi.html
+RedirectMatch 301 ^/jp/company/?$ /jp/about.html
+RedirectMatch 301 ^/jp/contact/?$ /jp/contact.html
+RedirectMatch 301 ^/jp/news/?$ /jp/news.html
