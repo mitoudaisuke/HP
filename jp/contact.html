@@ -111,7 +111,8 @@
         <h3 style="font-size:1.2rem; font-weight:700; color:var(--dark); margin-bottom:6px;">お問い合わせフォーム</h3>
         <p style="font-size:0.88rem; color:var(--gray-3); margin-bottom:28px;">ご入力いただいた個人情報は、お問い合わせへの返信以外の目的には使用いたしません。</p>
 
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xaqajlay" method="POST">
+          <input type="hidden" name="_subject" value="New NIRFI inquiry from toaoptics.com (JP)" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">お名前 <span class="req">*</span></label>
@@ -142,7 +143,8 @@
             <textarea id="message" name="message" placeholder="ご質問・ご要望をご記入ください"></textarea>
           </div>
           <p class="form-privacy">ご入力いただいた個人情報は適切に管理し、お問い合わせへの返信のみに使用いたします。</p>
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">送信する</button>
+          <button type="submit" class="btn btn-primary" data-default-text="送信する" style="width:100%; justify-content:center;">送信する</button>
+          <div id="form-error" class="form-error" role="alert"></div>
           <div id="form-success" class="form-success">
             ✓ お問い合わせを受け付けました。3営業日以内にご返信いたします。
           </div>
