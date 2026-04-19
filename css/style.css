@@ -819,6 +819,12 @@ tbody td:last-child { color: var(--gray-4); }
   margin-top: 24px;
   padding: 24px 28px;
 }
+.spec-note {
+  font-size: 0.82rem;
+  color: var(--gray-3);
+  margin-top: 16px;
+  line-height: 1.6;
+}
 
 /* ── Gallery Grid ── */
 .gallery-grid {
