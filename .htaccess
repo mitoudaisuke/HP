@@ -1,4 +1,5 @@
 RewriteEngine On
+ErrorDocument 404 /404.html
 
 # Canonical static page URLs
 RedirectMatch 301 ^/nirfi/?$ /nirfi.html
