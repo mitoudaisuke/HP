@@ -3,215 +3,279 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>東亜光学 | PCに直接つながる、小型NIR蛍光イメージング。</title>
-  <meta name="description" content="NIRFI™は、研究・教育・専門評価ワークフロー向けのコンパクトな近赤外蛍光イメージングシステムです。" />
-  <link rel="canonical" href="https://toaoptics.com/jp/" />
-  <link rel="alternate" hreflang="ja" href="https://toaoptics.com/jp/" />
-  <link rel="alternate" hreflang="en" href="https://toaoptics.com/" />
-  <link rel="alternate" hreflang="x-default" href="https://toaoptics.com/" />
+  <title>東亜光学 — NIRFI™ ポータブル近赤外線蛍光イメージャ</title>
+  <meta name="description" content="東亜光学のNIRFI™は、手のひらサイズのコンパクトな近赤外線蛍光イメージング装置です。ポータブル・低価格・高性能。" />
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="icon" type="image/png" href="../images/favicon.png" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Toa Optics Co., Ltd.",
-      "alternateName": "東亜光学株式会社",
-      "url": "https://toaoptics.com/",
-      "logo": "https://toaoptics.com/images/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2-28-1, Higashi-Azabu, Minato",
-        "addressLocality": "Tokyo",
-        "postalCode": "106-0044",
-        "addressCountry": "JP"
-      }
-    }
-  </script>
+  <link rel="icon" type="image/png" href="../images/logo.png" />
 </head>
 <body>
-<a class="skip-link" href="#main">本文へ移動</a>
 
-<nav class="nav" aria-label="主ナビゲーション">
+<!-- ── Navigation ── -->
+<nav class="nav">
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html" aria-label="東亜光学 ホーム">
-      <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
+    <a href="index.html" class="nav-logo">
+      <img src="../images/logo.png" alt="東亜光学" />
     </a>
-    <ul class="nav-links" aria-label="サイトナビゲーション">
+    <ul class="nav-links">
+      <li><a href="index.html">ホーム</a></li>
       <li><a href="nirfi.html">NIRFI™</a></li>
-      <li><a href="about.html">会社情報</a></li>
+      <li><a href="about.html">会社概要</a></li>
       <li><a href="news.html">ニュース</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
     </ul>
-    <a class="btn btn-primary nav-cta" href="contact.html">デモを問い合わせる</a>
-    <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
-      <span class="bar bar-1"></span>
-      <span class="bar bar-2"></span>
-      <span class="bar bar-3"></span>
-    </button>
+    <a href="contact.html" class="btn btn-primary nav-cta">資料請求</a>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
-
-<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true" inert>
-  <div class="mobile-menu-inner">
-    <a href="index.html">ホーム</a>
-    <a href="nirfi.html">NIRFI™</a>
-    <a href="about.html">会社情報</a>
-    <a href="news.html">ニュース</a>
-    <a class="btn btn-primary" href="contact.html">デモを問い合わせる</a>
-  </div>
+<div class="mobile-menu">
+  <a href="index.html">ホーム</a>
+  <a href="nirfi.html">NIRFI™</a>
+  <a href="about.html">会社概要</a>
+  <a href="news.html">ニュース</a>
+  <a href="contact.html">お問い合わせ</a>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:8px;">資料請求</a>
 </div>
 
-<main id="main">
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-label">近赤外線蛍光イメージング</div>
+        <h1 class="hero-title">
+          コンパクト。<br>
+          ポータブル。<br>
+          <span>パワフル。</span>
+        </h1>
+        <p class="hero-sub">
+          NIRFI™は、複雑なイメージングからポイントオブケアまで、組織の精密な可視化を実現します。手のひらサイズで、どこへでも。
+        </p>
+        <div class="hero-buttons">
+          <a href="nirfi.html" class="btn btn-primary">NIRFI™を詳しく見る</a>
+          <a href="contact.html" class="btn btn-outline">デモを申し込む</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/nirfi-hero.jpeg" alt="NIRFI装置" loading="eager" />
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>スクロール</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1>PCに直接つながる、小型NIR蛍光イメージング。</h1>
-          <p>NIRFI™は、研究・教育・専門評価ワークフロー向けのコンパクトな近赤外蛍光イメージングシステムです。USBで接続し、リアルタイム観察とPCへの直接保存をシンプルに行えます。</p>
-          <ul class="chip-list" aria-label="主な製品情報">
-            <li>約0.5 kg</li>
-            <li>USBバスパワー</li>
-            <li>PCへ直接保存</li>
-            <li>三脚対応</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.html">デモを問い合わせる</a>
-            <a class="btn btn-secondary" href="nirfi.html#specs">仕様を見る</a>
+<!-- ── Key Features ── -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto;">
+      <div class="section-label">NIRFI™の特長</div>
+      <h2 class="section-title" style="margin:0 auto 16px;">現場のために設計された</h2>
+      <p class="section-sub" style="margin:0 auto;">複雑な操作も高いコストも不要。信頼できるNIRイメージングを、臨床現場と研究者のために。</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-up fade-up-delay-1">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0M12 8v4l3 3"/></svg>
+        </div>
+        <div class="feature-title">すぐに使える</div>
+        <p class="feature-desc">USBで接続するだけでイメージングを開始。ドライバのインストールも設定作業も不要です。</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-2">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM12 3v4M12 17v4"/></svg>
+        </div>
+        <div class="feature-title">超軽量・ポータブル</div>
+        <p class="feature-desc">重量わずか約0.5kg。ベッドサイド、手術室、フィールドなど、どこでもイメージングが可能。</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-3">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 1 0 11.4 0M12 2v2"/></svg>
+        </div>
+        <div class="feature-title">高精度イメージング</div>
+        <p class="feature-desc">近赤外線蛍光技術により、組織の高コントラスト可視化と血管評価を実現します。</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-4">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="feature-title">圧倒的なコスパ</div>
+        <p class="feature-desc">市場で最も手頃なNIR蛍光イメージャ。画質を妥協することなく、低価格を実現しました。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Product Spotlight ── -->
+<section class="section">
+  <div class="container">
+    <div class="spotlight-inner">
+      <div class="spotlight-images fade-up">
+        <img src="images/nirfi-product-1.jpeg" alt="NIRFI使用例" loading="lazy" />
+        <img src="images/nirfi-product-2.jpeg" alt="NIRFI装置" loading="lazy" />
+        <img src="images/nirfi-product-3.jpeg" alt="NIRFIイメージング" loading="lazy" />
+      </div>
+      <div class="spotlight-text fade-up">
+        <div class="section-label">製品</div>
+        <h2 class="section-title">NIRFI™</h2>
+        <p class="section-sub">
+          最も手頃で扱いやすいNIR蛍光観察装置。リアルタイムの組織イメージングを、従来システムの煩雑さなしに実現したい研究者・臨床家のために設計されました。
+        </p>
+        <div class="specs-mini">
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">重量</span>
+            <span class="spec-val">約0.5kg（本体のみ）／約1.5kg（専用ケース込み）</span>
+          </div>
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">接続</span>
+            <span class="spec-val">USB（付属3mケーブル、最大約5mまで延長可能）</span>
+          </div>
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">保存</span>
+            <span class="spec-val">PCに直接保存 — 外部レコーダー不要</span>
+          </div>
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">取り付け</span>
+            <span class="spec-val">一般的な三脚に対応</span>
           </div>
         </div>
-        <figure class="hero-media">
-          <img src="../images/nirfi-product-1.jpeg" width="2560" height="1707" alt="ホストPCの横に設置されたNIRFIのコンパクトなセットアップ" />
-        </figure>
+        <a href="nirfi.html" class="btn btn-outline-navy">仕様を詳しく見る →</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Why NIRFI -->
-  <section class="section section--tint">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">NIRFI™の特長</h2>
+<!-- ── Applications ── -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto;">
+      <div class="section-label">応用分野</div>
+      <h2 class="section-title">NIRFI™の活用シーン</h2>
+      <p class="section-sub" style="margin:0 auto;">研究室でも、臨床現場でも。</p>
+    </div>
+    <div class="apps-grid">
+      <div class="app-card fade-up fade-up-delay-1">
+        <div class="app-number">01</div>
+        <div class="app-title">術中ガイダンス</div>
+        <p class="app-desc">組織灌流・リンパ流・血管解剖のリアルタイム術中可視化をサポートします。</p>
       </div>
-      <div class="benefit-grid">
-        <article class="benefit-card">
-          <h3>シンプルな設置</h3>
-          <p>USB接続とホストPC表示により、評価時の構成を簡潔にできます。</p>
-        </article>
-        <article class="benefit-card">
-          <h3>持ち運びやすい形式</h3>
-          <p>ベンチトップ評価、デモ、共有スペースで扱いやすいコンパクトな構成です。</p>
-        </article>
-        <article class="benefit-card">
-          <h3>記録までPCで完結</h3>
-          <p>取得画像を接続PCへ直接保存し、確認や記録に活用できます。</p>
-        </article>
+      <div class="app-card fade-up fade-up-delay-2">
+        <div class="app-number">02</div>
+        <div class="app-title">ポイントオブケア</div>
+        <p class="app-desc">ポータブル設計により、ベッドサイドや外来、設備の限られた環境での使用も可能。</p>
+      </div>
+      <div class="app-card fade-up fade-up-delay-3">
+        <div class="app-number">03</div>
+        <div class="app-title">前臨床研究</div>
+        <p class="app-desc">動物モデルイメージング、薬物送達追跡、蛍光ガイド下組織解析に最適。</p>
+      </div>
+      <div class="app-card fade-up fade-up-delay-1">
+        <div class="app-number">04</div>
+        <div class="app-title">血管評価</div>
+        <p class="app-desc">ICGなどのNIR蛍光剤を用いた非侵襲的な血流・組織酸素化評価が可能。</p>
+      </div>
+      <div class="app-card fade-up fade-up-delay-2">
+        <div class="app-number">05</div>
+        <div class="app-title">腫瘍学</div>
+        <p class="app-desc">蛍光ガイド下での腫瘍マージン検出やセンチネルリンパ節マッピングに対応。</p>
+      </div>
+      <div class="app-card fade-up fade-up-delay-3">
+        <div class="app-number">06</div>
+        <div class="app-title">教育・トレーニング</div>
+        <p class="app-desc">大学や研修機関でも導入できる価格帯で、NIRイメージング教育の普及を支援。</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Use cases + Technical snapshot -->
-  <section class="section">
-    <div class="container">
-      <div class="two-column-layout">
-        <article class="compact-panel">
-          <div class="section-label">用途</div>
-          <ul class="use-case-list" aria-label="用途">
-            <li>研究用途</li>
-            <li>教育・トレーニング</li>
-            <li>専門評価</li>
-            <li>技術デモ</li>
-            <li>ワークフロー確認</li>
-            <li>代理店・事業相談</li>
-          </ul>
-        </article>
-        <article class="compact-panel">
-          <div class="section-label">仕様サマリー</div>
-          <ul class="snapshot-list" aria-label="仕様サマリー">
-            <li><strong>本体重量</strong><span>約0.5 kg</span></li>
-            <li><strong>電源</strong><span>USBバスパワー</span></li>
-            <li><strong>接続</strong><span>USB</span></li>
-            <li><strong>保存</strong><span>ホストPCへ直接保存</span></li>
-            <li><strong>固定</strong><span>標準的な三脚に対応</span></li>
-          </ul>
-        </article>
+<!-- ── News ── -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="fade-up" style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:0;">
+      <div>
+        <div class="section-label">ニュース・イベント</div>
+        <h2 class="section-title" style="margin-bottom:0;">最新情報</h2>
+      </div>
+      <a href="news.html" class="btn btn-outline-navy">すべて見る</a>
+    </div>
+    <div class="news-grid" style="margin-top:48px;">
+      <div class="news-card fade-up fade-up-delay-1">
+        <div class="news-date">2025年8月6日</div>
+        <div class="news-title">MEDICA 2025（ドイツ・デュッセルドルフ）に出展</div>
+      </div>
+      <div class="news-card fade-up fade-up-delay-2">
+        <div class="news-date">2025年7月17日</div>
+        <div class="news-title">医療機器ビジネス交流会（大阪）に参加</div>
+      </div>
+      <div class="news-card fade-up fade-up-delay-3">
+        <div class="news-date">2025年7月1日</div>
+        <div class="news-title">MINATOディープテックスタートアッププログラム2025に採択</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Recent activity -->
-  <section class="section section--tint">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">最近の活動</h2>
-        <a class="section-link" href="news.html">ニュース一覧を見る</a>
-      </div>
-      <div class="activity-list">
-        <article class="activity-item">
-          <div class="activity-date">2025年8月6日</div>
-          <div class="activity-tag">展示会</div>
-          <div class="activity-title">MEDICA 2025</div>
-        </article>
-        <article class="activity-item">
-          <div class="activity-date">2025年7月17日</div>
-          <div class="activity-tag">イベント</div>
-          <div class="activity-title">医療機器ビジネス交流会</div>
-        </article>
-        <article class="activity-item">
-          <div class="activity-date">2025年7月1日</div>
-          <div class="activity-tag">採択</div>
-          <div class="activity-title">MINATOディープテックスタートアッププログラム 2025</div>
-        </article>
+<!-- ── CTA Banner ── -->
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="fade-up">
+      <div class="section-label" style="text-align:center;">お問い合わせ</div>
+      <h2 class="section-title" style="color:var(--dark); text-align:center;">NIRFI™にご興味はありますか？</h2>
+      <p class="section-sub" style="text-align:center; margin:0 auto 36px;">製品デモのご依頼、価格・在庫のお問い合わせは、お気軽にご連絡ください。</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">デモを申し込む</a>
+        <a href="nirfi.html" class="btn btn-outline">仕様を確認する</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="cta-panel">
-        <h2 class="section-title">NIRFI™を、ワークフローに沿って評価する。</h2>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="contact.html">デモを問い合わせる</a>
-          <a class="btn btn-secondary" href="nirfi.html#specs">仕様を見る</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
+<!-- ── Footer ── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
-        <p>研究・教育・専門評価に向けた、コンパクトな近赤外蛍光イメージング。</p>
-        <p class="footer-address">〒106-0044 東京都港区東麻布2-28-1</p>
+        <img src="../images/logo.png" alt="東亜光学" />
+        <p>コンパクトで手頃な近赤外線蛍光技術により、医療イメージングの未来を切り拓きます。</p>
+        <p style="margin-top:12px; font-size:0.82rem;">〒106-0044 東京都港区東麻布2-28-1</p>
       </div>
       <div>
         <div class="footer-heading">製品</div>
         <ul class="footer-links">
           <li><a href="nirfi.html">NIRFI™</a></li>
           <li><a href="nirfi.html#specs">仕様</a></li>
-          <li><a href="contact.html">デモを問い合わせる</a></li>
+          <li><a href="nirfi.html#applications">応用分野</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-heading">会社情報</div>
         <ul class="footer-links">
-          <li><a href="about.html">会社情報</a></li>
+          <li><a href="about.html">会社概要</a></li>
           <li><a href="news.html">ニュース</a></li>
-          <li><a href="privacy.html">プライバシー</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="../index.html">English ↗</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 東亜光学株式会社 All rights reserved.</span>
-      <a class="footer-language" href="../index.html">English</a>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
     </div>
-    <p class="footer-note">本サイト上のNIRFI™情報は、研究・教育・専門評価用途を目的としたものです。提供可否、表示、規制上の位置づけは国や想定用途によって異なる場合があります。地域と予定用途に応じた最新情報はお問い合わせください。</p>
+    <p class="footer-disclaimer">NIRFI™は研究・専門用途を目的とした製品です。臨床応用については、各国の規制に従ってください。</p>
   </div>
 </footer>
 

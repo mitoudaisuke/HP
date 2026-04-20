@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(curl -O https://toaoptics.com/wp-content/uploads/2025/08/DSC09527-scaled.jpeg -O https://toaoptics.com/wp-content/uploads/2025/09/DSC09679-scaled.jpeg -O https://toaoptics.com/wp-content/uploads/2025/09/DSC09516-scaled.jpeg -O https://toaoptics.com/wp-content/uploads/2025/09/DSC09607-scaled.jpeg -O https://toaoptics.com/wp-content/uploads/2025/09/DSC09641-scaled.jpeg -O https://toaoptics.com/wp-content/uploads/2025/02/DSC_0061-scaled.jpg -O https://toaoptics.com/wp-content/uploads/2025/02/DSC_0129-scaled.jpg)"
-    ]
-  }
-}

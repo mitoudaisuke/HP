@@ -3,160 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request a Demo | Toa Optics</title>
-  <meta name="description" content="Contact Toa Optics for NIRFI™ demos, product information, and business inquiries." />
-  <link rel="canonical" href="https://toaoptics.com/contact.html" />
-  <link rel="alternate" hreflang="en" href="https://toaoptics.com/contact.html" />
-  <link rel="alternate" hreflang="ja" href="https://toaoptics.com/jp/contact.html" />
-  <link rel="alternate" hreflang="x-default" href="https://toaoptics.com/contact.html" />
+  <title>Contact — Toa Optics</title>
+  <meta name="description" content="Contact Toa Optics to request a demo, pricing, or more information about NIRFI™." />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="nav" aria-label="Primary">
+<!-- ── Navigation ── -->
+<nav class="nav">
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html" aria-label="Toa Optics home">
-      <img src="images/logo.png" width="488" height="72" alt="Toa Optics" loading="lazy" />
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Toa Optics" />
     </a>
-    <ul class="nav-links" aria-label="Site navigation">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
       <li><a href="nirfi.html">NIRFI™</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a class="btn btn-primary nav-cta" href="contact.html">Request a Demo</a>
-    <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-      <span class="bar bar-1"></span>
-      <span class="bar bar-2"></span>
-      <span class="bar bar-3"></span>
-    </button>
+    <a href="contact.html" class="btn btn-primary nav-cta">Request Info</a>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
-
-<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true" inert>
-  <div class="mobile-menu-inner">
-    <a href="index.html">Home</a>
-    <a href="nirfi.html">NIRFI™</a>
-    <a href="about.html">About</a>
-    <a href="news.html">News</a>
-    <a class="btn btn-primary" href="contact.html">Request a Demo</a>
-  </div>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="nirfi.html">NIRFI™</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:8px;">Request Info</a>
 </div>
 
-<main id="main">
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label">Get in Touch</div>
+    <h1>Contact Us</h1>
+    <p>We will reply within 3 business days. We look forward to hearing from you.</p>
+  </div>
+</section>
 
-  <section class="page-hero">
-    <div class="container">
-      <h1>Request a demo</h1>
-      <p>For demos, product information, and business inquiries.</p>
-    </div>
-  </section>
+<!-- ── Contact Section ── -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
 
-  <section class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-copy">
-          <p>We use the information you provide only to respond to your inquiry and related communication.</p>
-          <div class="contact-detail-list">
-            <div class="contact-detail">
-              <strong>Response</strong>
-              <span>We will respond as soon as practicable.</span>
-            </div>
-            <div class="contact-detail">
-              <strong>Location</strong>
-              <span>2-28-1, Higashi-Azabu, Minato, Tokyo 106-0044, Japan</span>
-            </div>
-            <div class="contact-detail">
-              <strong>Regional context</strong>
-              <span>Please include your country or region and intended use.</span>
-            </div>
-            <div class="contact-detail">
-              <strong>Privacy</strong>
-              <span>See our <a href="privacy.html" style="color: var(--color-accent-strong);">privacy page</a> for the current handling summary.</span>
-            </div>
+      <!-- Info -->
+      <div class="fade-up">
+        <h3>How Can We Help?</h3>
+        <p>Whether you're interested in a product demonstration, distribution partnership, research collaboration, or general inquiry — please reach out. Our team is happy to assist.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <label>Address</label>
+            <span>2-28-1, Higashi-Azabu, Minato<br>Tokyo, Japan 106-0044</span>
           </div>
         </div>
 
-        <div class="contact-form-card">
-          <form id="contact-form" action="https://formspree.io/f/xaqajlay" method="POST" data-error-text="Something went wrong. Please try again." data-network-error-text="Network error. Please try again.">
-            <input type="hidden" name="_subject" value="New NIRFI inquiry from toaoptics.com" />
-            <div class="form-group">
-              <label for="inquiry-type">Inquiry type <span class="req">*</span></label>
-              <select id="inquiry-type" name="inquiry_type" required>
-                <option value="">Select one</option>
-                <option value="demo">Request a Demo</option>
-                <option value="datasheet">Product Information</option>
-                <option value="pricing">Pricing Question</option>
-                <option value="partner">Distributor / Partnership</option>
-                <option value="general">General Inquiry</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full name <span class="req">*</span></label>
-                <input id="name" name="name" type="text" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email <span class="req">*</span></label>
-                <input id="email" name="email" type="email" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="organization">Organization</label>
-                <input id="organization" name="organization" type="text" />
-              </div>
-              <div class="form-group">
-                <label for="country">Country / region <span class="req">*</span></label>
-                <input id="country" name="country" type="text" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="planned-use">Planned use</label>
-              <select id="planned-use" name="planned_use">
-                <option value="">Select one</option>
-                <option value="research">Research</option>
-                <option value="training">Training / Education</option>
-                <option value="evaluation">Professional Evaluation</option>
-                <option value="distribution">Distribution / Resale</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message <span class="req">*</span></label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            <label class="consent-check">
-              <input type="checkbox" name="consent" required />
-              <span>I understand that the information I provide will be used to answer this inquiry and related communication.</span>
-            </label>
-            <p class="form-note">NIRFI™ information on this site is provided for research, training, and professional evaluation use.</p>
-            <button class="btn btn-primary form-submit" type="submit" data-default-text="Send request" data-loading-text="Sending…" style="width: 100%;">Send request</button>
-            <div id="form-error" class="form-error" role="alert"></div>
-            <div id="form-success" class="form-success">Thank you. Your inquiry has been sent.</div>
-          </form>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <label>Email</label>
+            <span>Please use the form below to contact us</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <label>Response Time</label>
+            <span>Within 3 business days</span>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;">
+          <div class="footer-heading" style="color:var(--gray-4); margin-bottom:12px;">Follow Us</div>
+          <div style="display:flex; gap:12px;">
+            <a href="#" aria-label="Facebook" style="width:44px;height:44px;border:1px solid var(--gray-2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--navy);transition:all 0.3s;" onmouseover="this.style.background='var(--navy)';this.style.color='white';" onmouseout="this.style.background='';this.style.color='var(--navy)';">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" style="width:44px;height:44px;border:1px solid var(--gray-2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--navy);transition:all 0.3s;" onmouseover="this.style.background='var(--navy)';this.style.color='white';" onmouseout="this.style.background='';this.style.color='var(--navy)';">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div style="margin-top:36px; padding:20px 24px; background:var(--gray-1); border-radius:12px;">
+          <div style="font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cyan); margin-bottom:8px;">日本語サイト</div>
+          <a href="https://toaoptics.com" target="_blank" rel="noopener" style="font-size:0.92rem; font-weight:600; color:var(--navy); display:flex; align-items:center; gap:6px;">
+            toaoptics.com
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
       </div>
+
+      <!-- Form -->
+      <div class="contact-form-card fade-up">
+        <h3 style="font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Send Us a Message</h3>
+        <p style="font-size:0.88rem; color:var(--gray-3); margin-bottom:28px;">We will not use your personal information for purposes other than replying to your inquiry.</p>
+
+        <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
+        <!-- Sign up at formspree.io to get a free form endpoint -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="organization">Organization</label>
+            <input type="text" id="organization" name="organization" placeholder="Hospital, university, company…" />
+          </div>
+          <div class="form-group">
+            <label for="inquiry">Inquiry Type</label>
+            <select id="inquiry" name="inquiry">
+              <option value="">Select a topic…</option>
+              <option value="demo">Request a demonstration</option>
+              <option value="pricing">Pricing &amp; availability</option>
+              <option value="distribution">Distribution partnership</option>
+              <option value="research">Research collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us how we can help…"></textarea>
+          </div>
+          <p class="form-privacy">Your information is protected and will only be used to respond to your inquiry.</p>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+          <div id="form-success" class="form-success">
+            ✓ Thank you! Your message has been sent. We will respond within 3 business days.
+          </div>
+        </form>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
-
+<!-- ── Footer ── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" width="488" height="72" alt="Toa Optics" loading="lazy" />
-        <p>Compact near-infrared fluorescence imaging for research, training, and professional evaluation.</p>
-        <p class="footer-address">2-28-1, Higashi-Azabu, Minato, Tokyo 106-0044, Japan</p>
+        <img src="images/logo.png" alt="Toa Optics" />
+        <p>Advancing medical imaging through compact, accessible near-infrared fluorescence technology.</p>
+        <p style="margin-top:12px; font-size:0.82rem;">2-28-1, Higashi-Azabu, Minato, Tokyo, Japan 106-0044</p>
       </div>
       <div>
         <div class="footer-heading">Product</div>
         <ul class="footer-links">
           <li><a href="nirfi.html">NIRFI™</a></li>
           <li><a href="nirfi.html#specs">Specifications</a></li>
-          <li><a href="contact.html">Request a Demo</a></li>
+          <li><a href="nirfi.html#applications">Applications</a></li>
         </ul>
       </div>
       <div>
@@ -164,15 +176,23 @@
         <ul class="footer-links">
           <li><a href="about.html">About</a></li>
           <li><a href="news.html">News</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="jp/index.html">日本語版 ↗</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Toa Optics Co., Ltd. All rights reserved.</span>
-      <a class="footer-language" href="jp/contact.html">日本語</a>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
     </div>
-    <p class="footer-note">NIRFI™ information on this site is provided for research, training, and professional evaluation use. Availability, labeling, and regulatory status may vary by country and intended application. Contact Toa Optics for current information relevant to your region and planned use.</p>
+    <p class="footer-disclaimer">NIRFI™ is intended for research and professional use. Regulatory status may vary by country. For clinical applications, consult applicable local regulations.</p>
   </div>
 </footer>
 
