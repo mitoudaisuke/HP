@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>会社情報 | 東亜光学株式会社</title>
-  <meta name="description" content="東亜光学株式会社のミッション、会社概要、最近の活動をご紹介します。" />
+  <meta name="description" content="東亜光学株式会社の会社紹介、ミッション、会社概要、お問い合わせ情報です。" />
   <link rel="canonical" href="https://toaoptics.com/jp/about.html" />
   <link rel="alternate" hreflang="ja" href="https://toaoptics.com/jp/about.html" />
   <link rel="alternate" hreflang="en" href="https://toaoptics.com/about.html" />
@@ -35,7 +35,7 @@
 <nav class="nav" aria-label="主ナビゲーション">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html" aria-label="東亜光学 ホーム">
-      <img src="../images/logo.png" width="488" height="72" alt="東亜光学" />
+      <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
     </a>
     <ul class="nav-links">
       <li><a href="nirfi.html">NIRFI™</a></li>
@@ -44,12 +44,14 @@
     </ul>
     <a class="btn btn-primary nav-cta" href="contact.html">デモを問い合わせる</a>
     <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
-      <span></span><span></span><span></span>
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
     </button>
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true">
+<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true" inert>
   <div class="mobile-menu-inner">
     <a href="index.html">ホーム</a>
     <a href="nirfi.html">NIRFI™</a>
@@ -70,106 +72,55 @@
 
   <section class="section">
     <div class="container">
-      <div class="about-layout">
-        <div class="about-copy">
-          <div class="section-label">ミッション</div>
-          <h2 class="section-title">近赤外蛍光イメージングを、研究・教育・専門評価の現場でより扱いやすくする。</h2>
-          <p>東亜光学は、設置しやすく、評価しやすく、持ち運びしやすい構成に焦点を当てています。NIRFI™ は、その考え方を現在の製品として形にしたものです。</p>
-        </div>
-        <figure class="media-card">
-          <img src="../images/nirfi-team.jpeg" width="2560" height="1910" alt="東亜光学チームと開発環境" loading="lazy" />
-          <figcaption>
-            <strong>製品領域を絞る</strong>
-            コンパクトな近赤外蛍光イメージングと関連光学システムに集中しています。
-          </figcaption>
-        </figure>
-      </div>
+      <article class="compact-panel">
+        <div class="section-label">ミッション</div>
+        <h2 class="section-title">ミッション</h2>
+        <p>近赤外蛍光イメージングを、研究・教育・専門評価の現場でより扱いやすくする。</p>
+      </article>
     </div>
   </section>
 
-  <section class="section section--muted">
+  <section class="section section--tint">
     <div class="container">
-      <div class="section-header section-header--stack">
+      <div class="section-header">
         <div>
           <div class="section-label">会社概要</div>
-          <h2 class="section-title">会社の基本情報を見やすく整理。</h2>
+          <h2 class="section-title">会社概要</h2>
         </div>
       </div>
-      <div class="company-grid">
-        <article class="company-card">
-          <h3>会社名</h3>
-          <p>東亜光学株式会社 / Toa Optics Co., Ltd.</p>
-        </article>
-        <article class="company-card">
-          <h3>所在地</h3>
-          <p>〒106-0044 東京都港区東麻布2-28-1</p>
-        </article>
-        <article class="company-card">
-          <h3>事業領域</h3>
-          <p>コンパクトな近赤外蛍光イメージングおよび関連光学システム。</p>
-        </article>
-        <article class="company-card">
-          <h3>主製品</h3>
-          <p>NIRFI™</p>
-        </article>
-        <article class="company-card">
-          <h3>主なご相談先</h3>
-          <p>研究機関、大学、販売代理店、専門評価チーム。</p>
-        </article>
-        <article class="company-card">
-          <h3>お問い合わせ</h3>
-          <p><a href="contact.html">お問い合わせページ</a>をご利用ください。</p>
-        </article>
-      </div>
+      <dl class="profile-table">
+        <div class="profile-row">
+          <dt>会社名</dt>
+          <dd>東亜光学株式会社 / Toa Optics Co., Ltd.</dd>
+        </div>
+        <div class="profile-row">
+          <dt>所在地</dt>
+          <dd>〒106-0044 東京都港区東麻布2-28-1</dd>
+        </div>
+        <div class="profile-row">
+          <dt>事業領域</dt>
+          <dd>コンパクトな近赤外蛍光イメージングおよび関連光学システム。</dd>
+        </div>
+        <div class="profile-row">
+          <dt>主製品</dt>
+          <dd>NIRFI™</dd>
+        </div>
+        <div class="profile-row">
+          <dt>主なご相談先</dt>
+          <dd>研究機関、大学、販売代理店、専門評価チーム。</dd>
+        </div>
+      </dl>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="section-header section-header--stack">
-        <div>
-          <div class="section-label">最近の活動</div>
-          <h2 class="section-title">事実ベースの最近の活動。</h2>
-        </div>
-      </div>
-      <div class="activity-list">
-        <article class="activity-item">
-          <div class="activity-date">2025年7月1日</div>
-          <div class="activity-tag">採択</div>
-          <div class="activity-copy">
-            <strong>MINATOディープテックスタートアッププログラム 2025</strong>
-            <p>東京</p>
-          </div>
-        </article>
-        <article class="activity-item">
-          <div class="activity-date">2025年4月29日</div>
-          <div class="activity-tag">展示会</div>
-          <div class="activity-copy">
-            <strong>Laser World of Photonics 2025</strong>
-            <p>ドイツ・ミュンヘン</p>
-          </div>
-        </article>
-        <article class="activity-item">
-          <div class="activity-date">2025年8月6日</div>
-          <div class="activity-tag">展示会</div>
-          <div class="activity-copy">
-            <strong>MEDICA 2025</strong>
-            <p>ドイツ・デュッセルドルフ</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-banner">
-    <div class="container">
       <div class="cta-panel">
         <div class="section-label">お問い合わせ</div>
-        <h2 class="section-title">製品適合性、デモ、協業についてご相談ください。</h2>
-        <p class="section-copy">デモ依頼、技術確認、商談初期の相談まで、同じ導線で受け付けます。</p>
+        <h2 class="section-title">東亜光学へお問い合わせください。</h2>
+        <p class="section-copy">製品、デモ、事業相談はお問い合わせページから受け付けています。</p>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="contact.html">デモを問い合わせる</a>
-          <a class="btn btn-secondary" href="nirfi.html">NIRFI™を見る</a>
+          <a class="btn btn-primary" href="contact.html">お問い合わせ</a>
         </div>
       </div>
     </div>
@@ -180,7 +131,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="../images/logo.png" width="488" height="72" alt="東亜光学" />
+        <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
         <p>研究・教育・専門評価に向けた、コンパクトな近赤外蛍光イメージング。</p>
         <p class="footer-address">〒106-0044 東京都港区東麻布2-28-1</p>
       </div>
@@ -205,7 +156,7 @@
       <span>© 2026 東亜光学株式会社 All rights reserved.</span>
       <a class="footer-language" href="../about.html">English</a>
     </div>
-    <p class="footer-disclaimer">本サイト上のNIRFI™情報は、研究・教育・専門評価用途を目的としたものです。提供可否、表示、規制上の位置づけは国や想定用途によって異なる場合があります。</p>
+    <p class="footer-note">本サイト上のNIRFI™情報は、研究・教育・専門評価用途を目的としたものです。提供可否、表示、規制上の位置づけは国や想定用途によって異なる場合があります。地域と予定用途に応じた最新情報はお問い合わせください。</p>
   </div>
 </footer>
 

@@ -18,7 +18,7 @@
 <nav class="nav" aria-label="主ナビゲーション">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html" aria-label="東亜光学 ホーム">
-      <img src="../images/logo.png" width="488" height="72" alt="東亜光学" />
+      <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
     </a>
     <ul class="nav-links">
       <li><a href="nirfi.html">NIRFI™</a></li>
@@ -27,12 +27,14 @@
     </ul>
     <a class="btn btn-primary nav-cta" href="contact.html">デモを問い合わせる</a>
     <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
-      <span></span><span></span><span></span>
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
     </button>
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true">
+<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true" inert>
   <div class="mobile-menu-inner">
     <a href="index.html">ホーム</a>
     <a href="nirfi.html">NIRFI™</a>
@@ -46,8 +48,8 @@
   <section class="page-hero">
     <div class="container">
       <div class="section-label">ニュース</div>
-      <h1>最近の更新情報</h1>
-      <p>展示会出展、採択、事業活動に関する短い更新情報を一覧で掲載しています。</p>
+      <h1>最近の活動</h1>
+      <p>展示会、採択、事業活動に関する更新情報です。</p>
     </div>
   </section>
 
@@ -57,49 +59,23 @@
         <article class="news-item">
           <div class="news-item-date">2025年8月6日</div>
           <div class="news-item-tag">展示会</div>
-          <div>
-            <div class="news-item-title">MEDICA 2025（ドイツ・デュッセルドルフ）に出展</div>
-            <p class="news-item-body">NIRFI™ を外部活動の一環として出展しました。</p>
-          </div>
+          <div class="news-item-title">MEDICA 2025</div>
         </article>
         <article class="news-item">
           <div class="news-item-date">2025年7月17日</div>
           <div class="news-item-tag">イベント</div>
-          <div>
-            <div class="news-item-title">医療機器ビジネス交流会（大阪）に参加</div>
-            <p class="news-item-body">連携や事業開発に関する意見交換を行いました。</p>
-          </div>
+          <div class="news-item-title">医療機器ビジネス交流会に参加</div>
         </article>
         <article class="news-item">
           <div class="news-item-date">2025年7月1日</div>
           <div class="news-item-tag">採択</div>
-          <div>
-            <div class="news-item-title">MINATOディープテックスタートアッププログラム 2025 に採択</div>
-            <p class="news-item-body">東京都港区のディープテック支援プログラムに採択されました。</p>
-          </div>
+          <div class="news-item-title">MINATOディープテックスタートアッププログラム 2025 に採択</div>
         </article>
         <article class="news-item">
           <div class="news-item-date">2025年4月29日</div>
           <div class="news-item-tag">展示会</div>
-          <div>
-            <div class="news-item-title">Laser World of Photonics 2025（ドイツ・ミュンヘン）に出展</div>
-            <p class="news-item-body">国際的なフォトニクス分野の来場者に NIRFI™ を紹介しました。</p>
-          </div>
+          <div class="news-item-title">Laser World of Photonics 2025</div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-banner">
-    <div class="container">
-      <div class="cta-panel">
-        <div class="section-label">お問い合わせ</div>
-        <h2 class="section-title">製品について詳しく知りたいですか。</h2>
-        <p class="section-copy">デモ依頼、製品確認、協業相談を同じフォームで受け付けています。</p>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="contact.html">デモを問い合わせる</a>
-          <a class="btn btn-secondary" href="nirfi.html">NIRFI™を見る</a>
-        </div>
       </div>
     </div>
   </section>
@@ -109,7 +85,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="../images/logo.png" width="488" height="72" alt="東亜光学" />
+        <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
         <p>研究・教育・専門評価に向けた、コンパクトな近赤外蛍光イメージング。</p>
         <p class="footer-address">〒106-0044 東京都港区東麻布2-28-1</p>
       </div>
@@ -134,7 +110,7 @@
       <span>© 2026 東亜光学株式会社 All rights reserved.</span>
       <a class="footer-language" href="../news.html">English</a>
     </div>
-    <p class="footer-disclaimer">本サイト上のNIRFI™情報は、研究・教育・専門評価用途を目的としたものです。提供可否、表示、規制上の位置づけは国や想定用途によって異なる場合があります。</p>
+    <p class="footer-note">本サイト上のNIRFI™情報は、研究・教育・専門評価用途を目的としたものです。提供可否、表示、規制上の位置づけは国や想定用途によって異なる場合があります。地域と予定用途に応じた最新情報はお問い合わせください。</p>
   </div>
 </footer>
 

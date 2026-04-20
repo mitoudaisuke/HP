@@ -2,18 +2,23 @@ const nav = document.querySelector(".nav");
 const hamburger = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-menu");
 
+const firstBar = hamburger?.querySelector(".bar-1");
+const secondBar = hamburger?.querySelector(".bar-2");
+const thirdBar = hamburger?.querySelector(".bar-3");
+
 const setMenuState = (open) => {
   if (!hamburger || !mobileMenu) return;
 
   hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  hamburger.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
   mobileMenu.hidden = !open;
   mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+  mobileMenu.inert = !open;
   document.body.classList.toggle("menu-open", open);
 
-  const spans = hamburger.querySelectorAll("span");
-  if (spans[0]) spans[0].style.transform = open ? "translateY(6px) rotate(45deg)" : "";
-  if (spans[1]) spans[1].style.opacity = open ? "0" : "1";
-  if (spans[2]) spans[2].style.transform = open ? "translateY(-6px) rotate(-45deg)" : "";
+  if (firstBar) firstBar.style.transform = open ? "translateY(6px) rotate(45deg)" : "";
+  if (secondBar) secondBar.style.opacity = open ? "0" : "1";
+  if (thirdBar) thirdBar.style.transform = open ? "translateY(-6px) rotate(-45deg)" : "";
 };
 
 setMenuState(false);
@@ -22,14 +27,22 @@ window.addEventListener("scroll", () => {
   nav?.classList.toggle("scrolled", window.scrollY > 12);
 });
 
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 960) {
+    setMenuState(false);
+  }
+});
+
 hamburger?.addEventListener("click", () => {
   const isOpen = hamburger.getAttribute("aria-expanded") === "true";
   setMenuState(!isOpen);
 });
 
-mobileMenu?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => setMenuState(false));
-});
+if (mobileMenu) {
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+}
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && hamburger?.getAttribute("aria-expanded") === "true") {
@@ -48,14 +61,16 @@ document.querySelectorAll(".nav-links a, .mobile-menu a").forEach((link) => {
   const target = href.split("/").pop();
   if (target === currentPage) {
     link.classList.add("active");
+    link.setAttribute("aria-current", "page");
   }
 });
 
 const form = document.getElementById("contact-form");
+
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const submit = form.querySelector('button[type="submit"]');
+  const submit = form.querySelector(".form-submit");
   const success = document.getElementById("form-success");
   const error = document.getElementById("form-error");
   const defaultText = submit?.dataset.defaultText || submit?.textContent || "Send";

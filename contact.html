@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Request a Demo | Toa Optics</title>
-  <meta name="description" content="Contact Toa Optics for NIRFI™ demos, datasheets, pricing, distributor discussions, and other product inquiries." />
+  <meta name="description" content="Contact Toa Optics for NIRFI™ demos, product information, pricing questions, and business inquiries." />
   <link rel="canonical" href="https://toaoptics.com/contact.html" />
   <link rel="alternate" hreflang="en" href="https://toaoptics.com/contact.html" />
   <link rel="alternate" hreflang="ja" href="https://toaoptics.com/jp/contact.html" />
@@ -18,7 +18,7 @@
 <nav class="nav" aria-label="Primary">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html" aria-label="Toa Optics home">
-      <img src="images/logo.png" width="488" height="72" alt="Toa Optics" />
+      <img src="images/logo.png" width="488" height="72" alt="Toa Optics" loading="lazy" />
     </a>
     <ul class="nav-links">
       <li><a href="nirfi.html">NIRFI™</a></li>
@@ -27,12 +27,14 @@
     </ul>
     <a class="btn btn-primary nav-cta" href="contact.html">Request a Demo</a>
     <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-      <span></span><span></span><span></span>
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
     </button>
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true">
+<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true" inert>
   <div class="mobile-menu-inner">
     <a href="index.html">Home</a>
     <a href="nirfi.html">NIRFI™</a>
@@ -47,40 +49,21 @@
     <div class="container">
       <div class="section-label">Contact</div>
       <h1>Request a demo</h1>
-      <p>Use one inquiry flow for demos, datasheets, pricing questions, and partnership topics.</p>
+      <p>Use this form for demos, product information, pricing questions, and business inquiries.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="contact-reasons">
-        <article class="contact-reason">
-          <h3>Demonstration</h3>
-          <p>Tell us what you want to evaluate and how you would like to review the product.</p>
-        </article>
-        <article class="contact-reason">
-          <h3>Technical review</h3>
-          <p>Ask about current product details, specification documents, and workflow fit.</p>
-        </article>
-        <article class="contact-reason">
-          <h3>Pricing or partnership</h3>
-          <p>Use the same form for distributor, reseller, and early commercial discussion.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--muted">
-    <div class="container">
       <div class="contact-grid">
         <div class="contact-copy">
-          <div class="section-label">Before You Send</div>
-          <h2 class="section-title">A small amount of context helps us answer correctly.</h2>
-          <p>We use the information you provide only to respond to your inquiry and related product, demonstration, pricing, or partnership communication.</p>
+          <div class="section-label">Inquiry Information</div>
+          <h2 class="section-title">Share the context we need to respond.</h2>
+          <p>We use the information you provide only to respond to your inquiry and related communication.</p>
           <div class="contact-detail-list">
             <div class="contact-detail">
-              <strong>Response time</strong>
-              <span>Typically within 3 business days</span>
+              <strong>Response</strong>
+              <span>We will respond as soon as practicable.</span>
             </div>
             <div class="contact-detail">
               <strong>Location</strong>
@@ -88,7 +71,7 @@
             </div>
             <div class="contact-detail">
               <strong>Regional context</strong>
-              <span>Please include your country or region and intended use so we can respond appropriately.</span>
+              <span>Please include your country or region and intended use.</span>
             </div>
             <div class="contact-detail">
               <strong>Privacy</strong>
@@ -100,7 +83,7 @@
         <div class="contact-form-card">
           <div class="section-label">Inquiry Form</div>
           <h2 class="section-title">Tell us what you need.</h2>
-          <p class="section-copy">Required fields are limited to what helps us route the inquiry.</p>
+          <p class="section-copy">The information you submit will be used to answer your inquiry and related communication.</p>
           <form id="contact-form" action="https://formspree.io/f/xaqajlay" method="POST" data-error-text="Something went wrong. Please try again." data-network-error-text="Network error. Please try again.">
             <input type="hidden" name="_subject" value="New NIRFI inquiry from toaoptics.com" />
             <div class="form-group">
@@ -108,7 +91,7 @@
               <select id="inquiry-type" name="inquiry_type" required>
                 <option value="">Select one</option>
                 <option value="demo">Request a Demo</option>
-                <option value="datasheet">Request a Datasheet</option>
+                <option value="datasheet">Request Product Information</option>
                 <option value="pricing">Pricing Question</option>
                 <option value="partner">Distributor / Partnership</option>
                 <option value="general">General Inquiry</option>
@@ -154,7 +137,7 @@
               <span>I understand that the information I provide will be used to answer this inquiry and related communication.</span>
             </label>
             <p class="form-note">NIRFI™ information on this site is provided for research, training, and professional evaluation use.</p>
-            <button class="btn btn-primary" type="submit" data-default-text="Send request" data-loading-text="Sending..." style="width:100%;">Send request</button>
+            <button class="btn btn-primary form-submit" type="submit" data-default-text="Send request" data-loading-text="Sending..." style="width: 100%;">Send request</button>
             <div id="form-error" class="form-error" role="alert"></div>
             <div id="form-success" class="form-success">Thank you. Your inquiry has been sent.</div>
           </form>
@@ -168,8 +151,8 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" width="488" height="72" alt="Toa Optics" />
-        <p>Advancing compact near-infrared fluorescence imaging for research, training, and professional evaluation.</p>
+        <img src="images/logo.png" width="488" height="72" alt="Toa Optics" loading="lazy" />
+        <p>Compact near-infrared fluorescence imaging for research, training, and professional evaluation.</p>
         <p class="footer-address">2-28-1, Higashi-Azabu, Minato, Tokyo, Japan 106-0044</p>
       </div>
       <div>
@@ -193,7 +176,7 @@
       <span>© 2026 Toa Optics Co., Ltd. All rights reserved.</span>
       <a class="footer-language" href="jp/contact.html">日本語</a>
     </div>
-    <p class="footer-disclaimer">NIRFI™ information on this site is provided for research, training, and professional evaluation use. Availability, labeling, and regulatory status may vary by country and intended application.</p>
+    <p class="footer-note">NIRFI™ information on this site is provided for research, training, and professional evaluation use. Availability, labeling, and regulatory status may vary by country and intended application. Contact Toa Optics for current information relevant to your region and planned use.</p>
   </div>
 </footer>
 
