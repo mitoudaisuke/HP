@@ -11,6 +11,7 @@ hamburger?.addEventListener('click', () => {
   mobileMenu?.classList.toggle('open');
   const spans = hamburger.querySelectorAll('span');
   const isOpen = mobileMenu?.classList.contains('open');
+  hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   if (spans[0]) spans[0].style.transform = isOpen ? 'rotate(45deg) translate(5px,5px)' : '';
   if (spans[1]) spans[1].style.opacity = isOpen ? '0' : '1';
   if (spans[2]) spans[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px,-5px)' : '';
@@ -19,8 +20,19 @@ mobileMenu?.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
     const spans = hamburger?.querySelectorAll('span');
+    hamburger?.setAttribute('aria-expanded', 'false');
     if (spans) { spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; }); }
   });
+});
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mobileMenu?.classList.contains('open')) {
+    mobileMenu.classList.remove('open');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    const spans = hamburger?.querySelectorAll('span');
+    if (spans) { spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; }); }
+    hamburger?.focus();
+  }
 });
 
 // ── Active nav link ──
