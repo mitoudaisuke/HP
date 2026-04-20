@@ -37,7 +37,7 @@
     <a class="nav-logo" href="index.html" aria-label="東亜光学 ホーム">
       <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" aria-label="サイトナビゲーション">
       <li><a href="nirfi.html">NIRFI™</a></li>
       <li><a href="about.html">会社情報</a></li>
       <li><a href="news.html">ニュース</a></li>
@@ -62,11 +62,12 @@
 </div>
 
 <main id="main">
+
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="section-label">近赤外蛍光イメージング</div>
           <h1>PCに直接つながる、小型NIR蛍光イメージング。</h1>
           <p>NIRFI™は、研究・教育・専門評価ワークフロー向けのコンパクトな近赤外蛍光イメージングシステムです。USBで接続し、リアルタイム観察とPCへの直接保存をシンプルに行えます。</p>
           <ul class="chip-list" aria-label="主な製品情報">
@@ -87,38 +88,11 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top: 0;">
-    <div class="container">
-      <div class="facts-strip" aria-label="製品ファクト">
-        <ul class="facts-strip-list">
-          <li>
-            <span>構成</span>
-            <strong>手元で扱いやすい小型システム</strong>
-          </li>
-          <li>
-            <span>用途</span>
-            <strong>研究・教育・専門評価</strong>
-          </li>
-          <li>
-            <span>接続</span>
-            <strong>USBでホストPCへ接続</strong>
-          </li>
-          <li>
-            <span>保存</span>
-            <strong>リアルタイム観察とPCへの直接保存</strong>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
+  <!-- Why NIRFI -->
+  <section class="section section--tint">
     <div class="container">
       <div class="section-header">
-        <div>
-          <div class="section-label">NIRFIの特長</div>
-          <h2 class="section-title">評価の入口を簡潔に。</h2>
-        </div>
+        <h2 class="section-title">NIRFI™の特長</h2>
       </div>
       <div class="benefit-grid">
         <article class="benefit-card">
@@ -137,14 +111,9 @@
     </div>
   </section>
 
-  <section class="section section--tint">
+  <!-- Use cases + Technical snapshot -->
+  <section class="section">
     <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-label">用途と仕様サマリー</div>
-          <h2 class="section-title">用途と仕様のサマリー。</h2>
-        </div>
-      </div>
       <div class="two-column-layout">
         <article class="compact-panel">
           <div class="section-label">用途</div>
@@ -171,13 +140,11 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- Recent activity -->
+  <section class="section section--tint">
     <div class="container">
       <div class="section-header">
-        <div>
-          <div class="section-label">最近の活動</div>
-          <h2 class="section-title">最近の活動</h2>
-        </div>
+        <h2 class="section-title">最近の活動</h2>
         <a class="section-link" href="news.html">ニュース一覧を見る</a>
       </div>
       <div class="activity-list">
@@ -200,12 +167,11 @@
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="section">
     <div class="container">
       <div class="cta-panel">
-        <div class="section-label">次のステップ</div>
         <h2 class="section-title">NIRFI™を、ワークフローに沿って評価する。</h2>
-        <p class="section-copy">デモのご相談、または確認済み仕様の確認はこちらから。</p>
         <div class="cta-actions">
           <a class="btn btn-primary" href="contact.html">デモを問い合わせる</a>
           <a class="btn btn-secondary" href="nirfi.html#specs">仕様を見る</a>
@@ -213,6 +179,7 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="footer">

@@ -16,10 +16,7 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "NIRFI",
-      "brand": {
-        "@type": "Brand",
-        "name": "Toa Optics"
-      },
+      "brand": { "@type": "Brand", "name": "Toa Optics" },
       "manufacturer": {
         "@type": "Organization",
         "name": "Toa Optics Co., Ltd.",
@@ -40,7 +37,7 @@
     <a class="nav-logo" href="index.html" aria-label="東亜光学 ホーム">
       <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" aria-label="サイトナビゲーション">
       <li><a href="nirfi.html">NIRFI™</a></li>
       <li><a href="about.html">会社情報</a></li>
       <li><a href="news.html">ニュース</a></li>
@@ -65,13 +62,14 @@
 </div>
 
 <main id="main">
+
+  <!-- Hero -->
   <section class="product-hero">
     <div class="container">
       <div class="product-grid">
         <div class="detail-copy">
-          <div class="section-label">製品情報</div>
           <h1>NIRFI™</h1>
-          <p>NIRFI™は、研究・教育・専門評価ワークフロー向けのコンパクトな近赤外蛍光イメージングシステムです。USBで接続し、リアルタイム観察とPCへの直接保存をシンプルに行えます。</p>
+          <p>研究・教育・専門評価ワークフロー向けのコンパクトな近赤外蛍光イメージングシステムです。USBで接続し、リアルタイム観察とPCへの直接保存をシンプルに行えます。</p>
           <ul class="chip-list" aria-label="主な製品情報">
             <li>約0.5 kg</li>
             <li>USBバスパワー</li>
@@ -90,69 +88,9 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- Gallery -->
+  <section class="section section--tint">
     <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-label">NIRFIの特長</div>
-          <h2 class="section-title">3つの実用的な特長。</h2>
-        </div>
-      </div>
-      <div class="benefit-grid">
-        <article class="benefit-card">
-          <h3>シンプルな設置</h3>
-          <p>USB接続とホストPC表示により、評価時の構成を簡潔にできます。</p>
-        </article>
-        <article class="benefit-card">
-          <h3>持ち運びやすい形式</h3>
-          <p>ベンチトップ評価、デモ、共有スペースで扱いやすいコンパクトな構成です。</p>
-        </article>
-        <article class="benefit-card">
-          <h3>記録までPCで完結</h3>
-          <p>取得画像を接続PCへ直接保存し、確認や記録に活用できます。</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--tint" id="specs">
-    <div class="container">
-      <div class="two-column-layout">
-        <article class="compact-panel">
-          <div class="section-label">用途</div>
-          <h2 class="panel-title">代表的なワークフロー</h2>
-          <ul class="use-case-list" aria-label="代表的な用途">
-            <li>研究</li>
-            <li>教育・トレーニング</li>
-            <li>専門評価</li>
-          </ul>
-        </article>
-        <article class="compact-panel">
-          <div class="section-label">仕様</div>
-          <h2 class="panel-title">確認済みの仕様</h2>
-          <ul class="snapshot-list" aria-label="確認済みの仕様">
-            <li><strong>イメージング方式</strong><span>近赤外蛍光イメージング</span></li>
-            <li><strong>本体重量</strong><span>約0.5 kg</span></li>
-            <li><strong>電源</strong><span>USBバスパワー</span></li>
-            <li><strong>接続</strong><span>USB</span></li>
-            <li><strong>保存</strong><span>ホストPCへ直接保存</span></li>
-            <li><strong>表示</strong><span>ホストPCでライブ表示</span></li>
-            <li><strong>固定</strong><span>標準的な三脚に対応</span></li>
-          </ul>
-          <p class="spec-note">追加資料はお問い合わせください。</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-label">ギャラリー</div>
-          <h2 class="section-title">製品イメージ</h2>
-        </div>
-      </div>
       <div class="gallery-grid">
         <figure class="gallery-figure">
           <img src="../images/nirfi-product-1.jpeg" width="2560" height="1707" alt="PCの横に設置されたNIRFI本体" loading="lazy" />
@@ -174,10 +112,39 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- Use + Specs -->
+  <section class="section" id="specs">
+    <div class="container">
+      <div class="two-column-layout">
+        <article class="compact-panel">
+          <div class="section-label">用途</div>
+          <ul class="use-case-list" aria-label="代表的な用途">
+            <li>研究</li>
+            <li>教育・トレーニング</li>
+            <li>専門評価</li>
+          </ul>
+        </article>
+        <article class="compact-panel">
+          <div class="section-label">仕様</div>
+          <ul class="snapshot-list" aria-label="確認済みの仕様">
+            <li><strong>イメージング方式</strong><span>近赤外蛍光イメージング</span></li>
+            <li><strong>本体重量</strong><span>約0.5 kg</span></li>
+            <li><strong>電源</strong><span>USBバスパワー</span></li>
+            <li><strong>接続</strong><span>USB</span></li>
+            <li><strong>保存</strong><span>ホストPCへ直接保存</span></li>
+            <li><strong>表示</strong><span>ホストPCでライブ表示</span></li>
+            <li><strong>固定</strong><span>標準的な三脚に対応</span></li>
+          </ul>
+          <p class="spec-note">追加資料はお問い合わせください。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--tint">
     <div class="container">
       <div class="cta-panel">
-        <div class="section-label">次のステップ</div>
         <h2 class="section-title">利用条件や提供可否をご相談ください。</h2>
         <p class="section-copy">地域と予定用途に応じた最新情報は東亜光学までお問い合わせください。</p>
         <div class="cta-actions">
@@ -187,6 +154,7 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="footer">

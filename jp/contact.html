@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>デモ依頼・お問い合わせ | 東亜光学</title>
-  <meta name="description" content="NIRFI™のデモ依頼、製品確認、価格確認、事業相談についてお問い合わせください。" />
+  <meta name="description" content="NIRFI™のデモ依頼、製品確認、事業相談についてお問い合わせください。" />
   <link rel="canonical" href="https://toaoptics.com/jp/contact.html" />
   <link rel="alternate" hreflang="ja" href="https://toaoptics.com/jp/contact.html" />
   <link rel="alternate" hreflang="en" href="https://toaoptics.com/contact.html" />
@@ -20,7 +20,7 @@
     <a class="nav-logo" href="index.html" aria-label="東亜光学 ホーム">
       <img src="../images/logo.png" width="488" height="72" alt="東亜光学" loading="lazy" />
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" aria-label="サイトナビゲーション">
       <li><a href="nirfi.html">NIRFI™</a></li>
       <li><a href="about.html">会社情報</a></li>
       <li><a href="news.html">ニュース</a></li>
@@ -45,11 +45,11 @@
 </div>
 
 <main id="main">
+
   <section class="page-hero">
     <div class="container">
-      <div class="section-label">お問い合わせ</div>
       <h1>デモ依頼・お問い合わせ</h1>
-      <p>デモ依頼、製品確認、価格確認、事業相談をこのフォームで受け付けます。</p>
+      <p>デモ依頼、製品確認、事業相談を受け付けています。</p>
     </div>
   </section>
 
@@ -57,8 +57,6 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-copy">
-          <div class="section-label">ご案内</div>
-          <h2 class="section-title">回答に必要な情報をご入力ください。</h2>
           <p>ご入力いただいた情報は、お問い合わせへの回答および関連するご連絡のためにのみ使用します。</p>
           <div class="contact-detail-list">
             <div class="contact-detail">
@@ -75,15 +73,12 @@
             </div>
             <div class="contact-detail">
               <strong>プライバシー</strong>
-              <span><a href="privacy.html">プライバシーページ</a>で現在の取り扱い概要をご確認いただけます。</span>
+              <span><a href="privacy.html" style="color: var(--color-accent-strong);">プライバシーページ</a>で現在の取り扱い概要をご確認いただけます。</span>
             </div>
           </div>
         </div>
 
         <div class="contact-form-card">
-          <div class="section-label">フォーム</div>
-          <h2 class="section-title">必要事項をご入力ください。</h2>
-          <p class="section-copy">入力された情報は、お問い合わせへの回答および関連するご連絡のために使用します。</p>
           <form id="contact-form" action="https://formspree.io/f/xaqajlay" method="POST" data-error-text="送信中に問題が発生しました。時間をおいて再度お試しください。" data-network-error-text="通信エラーが発生しました。接続をご確認のうえ再度お試しください。">
             <input type="hidden" name="_subject" value="New NIRFI inquiry from toaoptics.com (JP)" />
             <div class="form-group">
@@ -137,7 +132,7 @@
               <span>入力した情報が、お問い合わせ対応および関連するご連絡に利用されることを理解しています。</span>
             </label>
             <p class="form-note">本サイト上のNIRFI™情報は、研究・教育・専門評価用途を目的としたものです。</p>
-            <button class="btn btn-primary form-submit" type="submit" data-default-text="送信する" data-loading-text="送信中..." style="width: 100%;">送信する</button>
+            <button class="btn btn-primary form-submit" type="submit" data-default-text="送信する" data-loading-text="送信中…" style="width: 100%;">送信する</button>
             <div id="form-error" class="form-error" role="alert"></div>
             <div id="form-success" class="form-success">お問い合わせを受け付けました。</div>
           </form>
@@ -145,6 +140,7 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="footer">

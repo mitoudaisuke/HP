@@ -16,10 +16,7 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "NIRFI",
-      "brand": {
-        "@type": "Brand",
-        "name": "Toa Optics"
-      },
+      "brand": { "@type": "Brand", "name": "Toa Optics" },
       "manufacturer": {
         "@type": "Organization",
         "name": "Toa Optics Co., Ltd.",
@@ -40,7 +37,7 @@
     <a class="nav-logo" href="index.html" aria-label="Toa Optics home">
       <img src="images/logo.png" width="488" height="72" alt="Toa Optics" loading="lazy" />
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" aria-label="Site navigation">
       <li><a href="nirfi.html">NIRFI™</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="news.html">News</a></li>
@@ -65,13 +62,14 @@
 </div>
 
 <main id="main">
+
+  <!-- Hero -->
   <section class="product-hero">
     <div class="container">
       <div class="product-grid">
         <div class="detail-copy">
-          <div class="section-label">Product</div>
           <h1>NIRFI™</h1>
-          <p>NIRFI™ is a compact near-infrared fluorescence imaging system for research, training, and professional evaluation workflows. Connect by USB, observe in real time, and save images directly to a host PC.</p>
+          <p>Compact near-infrared fluorescence imaging system for research, training, and professional evaluation. Connect by USB, observe in real time, save directly to a host PC.</p>
           <ul class="chip-list" aria-label="Key product facts">
             <li>Approx. 0.5 kg</li>
             <li>USB bus powered</li>
@@ -90,69 +88,9 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- Gallery -->
+  <section class="section section--tint">
     <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-label">Why NIRFI</div>
-          <h2 class="section-title">Practical advantages.</h2>
-        </div>
-      </div>
-      <div class="benefit-grid">
-        <article class="benefit-card">
-          <h3>Simple setup</h3>
-          <p>USB connection and host-PC display reduce setup complexity.</p>
-        </article>
-        <article class="benefit-card">
-          <h3>Portable format</h3>
-          <p>Compact enough for bench-top evaluation, demos, and shared workspaces.</p>
-        </article>
-        <article class="benefit-card">
-          <h3>Direct documentation</h3>
-          <p>Capture images directly to the connected PC for review and reporting.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--tint" id="specs">
-    <div class="container">
-      <div class="two-column-layout">
-        <article class="compact-panel">
-          <div class="section-label">Use</div>
-          <h2 class="panel-title">Representative workflows</h2>
-          <ul class="use-case-list" aria-label="Representative workflows">
-            <li>Research imaging</li>
-            <li>Training &amp; education</li>
-            <li>Professional evaluation</li>
-          </ul>
-        </article>
-        <article class="compact-panel">
-          <div class="section-label">Specifications</div>
-          <h2 class="panel-title">Confirmed specifications</h2>
-          <ul class="snapshot-list" aria-label="Confirmed specifications">
-            <li><strong>Imaging modality</strong><span>Near-infrared fluorescence imaging</span></li>
-            <li><strong>Device weight</strong><span>Approx. 0.5 kg device only</span></li>
-            <li><strong>Power</strong><span>USB bus power</span></li>
-            <li><strong>Connectivity</strong><span>USB</span></li>
-            <li><strong>Capture</strong><span>Direct save to host PC</span></li>
-            <li><strong>Display</strong><span>Live view on host PC</span></li>
-            <li><strong>Mounting</strong><span>Standard tripod compatible</span></li>
-          </ul>
-          <p class="spec-note">Additional materials are available on request.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-label">Gallery</div>
-          <h2 class="section-title">Product views.</h2>
-        </div>
-      </div>
       <div class="gallery-grid">
         <figure class="gallery-figure">
           <img src="images/nirfi-product-1.jpeg" width="2560" height="1707" alt="NIRFI device next to a host PC" loading="lazy" />
@@ -174,10 +112,39 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- Use + Specs -->
+  <section class="section" id="specs">
+    <div class="container">
+      <div class="two-column-layout">
+        <article class="compact-panel">
+          <div class="section-label">Use</div>
+          <ul class="use-case-list" aria-label="Representative workflows">
+            <li>Research imaging</li>
+            <li>Training &amp; education</li>
+            <li>Professional evaluation</li>
+          </ul>
+        </article>
+        <article class="compact-panel">
+          <div class="section-label">Specifications</div>
+          <ul class="snapshot-list" aria-label="Confirmed specifications">
+            <li><strong>Imaging modality</strong><span>Near-infrared fluorescence imaging</span></li>
+            <li><strong>Device weight</strong><span>Approx. 0.5 kg device only</span></li>
+            <li><strong>Power</strong><span>USB bus power</span></li>
+            <li><strong>Connectivity</strong><span>USB</span></li>
+            <li><strong>Capture</strong><span>Direct save to host PC</span></li>
+            <li><strong>Display</strong><span>Live view on host PC</span></li>
+            <li><strong>Mounting</strong><span>Standard tripod compatible</span></li>
+          </ul>
+          <p class="spec-note">Additional materials are available on request.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--tint">
     <div class="container">
       <div class="cta-panel">
-        <div class="section-label">Next Step</div>
         <h2 class="section-title">Discuss fit for your workflow.</h2>
         <p class="section-copy">For current availability and intended use in your region, please contact Toa Optics.</p>
         <div class="cta-actions">
@@ -187,6 +154,7 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="footer">
@@ -195,7 +163,7 @@
       <div class="footer-brand">
         <img src="images/logo.png" width="488" height="72" alt="Toa Optics" loading="lazy" />
         <p>Compact near-infrared fluorescence imaging for research, training, and professional evaluation.</p>
-        <p class="footer-address">2-28-1, Higashi-Azabu, Minato, Tokyo, Japan 106-0044</p>
+        <p class="footer-address">2-28-1, Higashi-Azabu, Minato, Tokyo 106-0044, Japan</p>
       </div>
       <div>
         <div class="footer-heading">Product</div>
