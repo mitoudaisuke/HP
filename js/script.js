@@ -1,93 +1,103 @@
-// ── Nav scroll effect ──
-const nav = document.querySelector('.nav');
-window.addEventListener('scroll', () => {
-  nav?.classList.toggle('scrolled', window.scrollY > 40);
+const nav = document.querySelector(".nav");
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+const setMenuState = (open) => {
+  if (!hamburger || !mobileMenu) return;
+
+  hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  mobileMenu.hidden = !open;
+  mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+  document.body.classList.toggle("menu-open", open);
+
+  const spans = hamburger.querySelectorAll("span");
+  if (spans[0]) spans[0].style.transform = open ? "translateY(6px) rotate(45deg)" : "";
+  if (spans[1]) spans[1].style.opacity = open ? "0" : "1";
+  if (spans[2]) spans[2].style.transform = open ? "translateY(-6px) rotate(-45deg)" : "";
+};
+
+setMenuState(false);
+
+window.addEventListener("scroll", () => {
+  nav?.classList.toggle("scrolled", window.scrollY > 12);
 });
 
-// ── Mobile menu ──
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-hamburger?.addEventListener('click', () => {
-  mobileMenu?.classList.toggle('open');
-  const spans = hamburger.querySelectorAll('span');
-  const isOpen = mobileMenu?.classList.contains('open');
-  hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  if (spans[0]) spans[0].style.transform = isOpen ? 'rotate(45deg) translate(5px,5px)' : '';
-  if (spans[1]) spans[1].style.opacity = isOpen ? '0' : '1';
-  if (spans[2]) spans[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px,-5px)' : '';
-});
-mobileMenu?.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    const spans = hamburger?.querySelectorAll('span');
-    hamburger?.setAttribute('aria-expanded', 'false');
-    if (spans) { spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; }); }
-  });
+hamburger?.addEventListener("click", () => {
+  const isOpen = hamburger.getAttribute("aria-expanded") === "true";
+  setMenuState(!isOpen);
 });
 
-window.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && mobileMenu?.classList.contains('open')) {
-    mobileMenu.classList.remove('open');
-    hamburger?.setAttribute('aria-expanded', 'false');
-    const spans = hamburger?.querySelectorAll('span');
-    if (spans) { spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; }); }
-    hamburger?.focus();
+mobileMenu?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setMenuState(false));
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && hamburger?.getAttribute("aria-expanded") === "true") {
+    setMenuState(false);
+    hamburger.focus();
   }
 });
 
-// ── Active nav link ──
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
-  const href = a.getAttribute('href');
-  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-    a.classList.add('active');
+const path = window.location.pathname;
+const currentPage = path.endsWith("/") ? "index.html" : path.split("/").pop() || "index.html";
+
+document.querySelectorAll(".nav-links a, .mobile-menu a").forEach((link) => {
+  const href = link.getAttribute("href");
+  if (!href) return;
+
+  const target = href.split("/").pop();
+  if (target === currentPage) {
+    link.classList.add("active");
   }
 });
 
-// ── Fade-up on scroll ──
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+const form = document.getElementById("contact-form");
+form?.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-// ── Contact form (Formspree) ──
-const form = document.getElementById('contact-form');
-form?.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  const success = document.getElementById('form-success');
-  const error = document.getElementById('form-error');
-  const defaultText = btn?.dataset.defaultText || btn?.textContent || 'Send';
-  if (success) { success.style.display = 'none'; }
+  const submit = form.querySelector('button[type="submit"]');
+  const success = document.getElementById("form-success");
+  const error = document.getElementById("form-error");
+  const defaultText = submit?.dataset.defaultText || submit?.textContent || "Send";
+  const loadingText = submit?.dataset.loadingText || "Sending...";
+  const errorText = form.dataset.errorText || "Something went wrong. Please try again.";
+  const networkErrorText = form.dataset.networkErrorText || "Network error. Please try again.";
+
+  if (submit) {
+    submit.disabled = true;
+    submit.textContent = loadingText;
+  }
+
+  if (success) success.style.display = "none";
   if (error) {
-    error.style.display = 'none';
-    error.textContent = '';
+    error.style.display = "none";
+    error.textContent = "";
   }
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
+
   try {
-    const res = await fetch(form.action, {
-      method: 'POST',
+    const response = await fetch(form.action, {
+      method: "POST",
       body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
+      headers: { Accept: "application/json" }
     });
-    if (res.ok) {
-      form.reset();
-      if (success) { success.style.display = 'block'; }
-    } else {
-      const data = await res.json().catch(() => null);
-      const message = data?.errors?.map((item) => item.message).join(' ') || 'Something went wrong. Please try again.';
-      if (error) {
-        error.textContent = message;
-        error.style.display = 'block';
-      }
+
+    if (!response.ok) {
+      const data = await response.json().catch(() => null);
+      const detail = data?.errors?.map((item) => item.message).join(" ");
+      throw new Error(detail || errorText);
     }
-  } catch {
+
+    form.reset();
+    if (success) success.style.display = "block";
+  } catch (err) {
     if (error) {
-      error.textContent = 'Network error. Please try again.';
-      error.style.display = 'block';
+      error.textContent = err instanceof Error ? err.message : networkErrorText;
+      error.style.display = "block";
+    }
+  } finally {
+    if (submit) {
+      submit.disabled = false;
+      submit.textContent = defaultText;
     }
   }
-  btn.textContent = defaultText;
-  btn.disabled = false;
 });

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Toa Optics | Company Overview and Profile</title>
-  <meta name="description" content="Learn about Toa Optics, the Tokyo-based company behind NIRFI™, and review our company profile, mission, and recent external activities." />
+  <title>About Toa Optics | Company profile and mission</title>
+  <meta name="description" content="Learn about Toa Optics, our mission, company profile, and recent activity related to compact near-infrared fluorescence imaging." />
   <link rel="canonical" href="https://toaoptics.com/about.html" />
   <link rel="alternate" hreflang="en" href="https://toaoptics.com/about.html" />
   <link rel="alternate" hreflang="ja" href="https://toaoptics.com/jp/about.html" />
@@ -32,32 +32,31 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="nav">
+<nav class="nav" aria-label="Primary">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="Toa Optics home">
-      <img src="images/logo.png" alt="Toa Optics" />
+    <a class="nav-logo" href="index.html" aria-label="Toa Optics home">
+      <img src="images/logo.png" width="488" height="72" alt="Toa Optics" />
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
       <li><a href="nirfi.html">NIRFI™</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="news.html">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="contact.html" class="btn btn-primary nav-cta">Request a Demo</a>
+    <a class="btn btn-primary nav-cta" href="contact.html">Request a Demo</a>
     <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="nirfi.html">NIRFI™</a>
-  <a href="about.html">About</a>
-  <a href="news.html">News</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Request a Demo</a>
+<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="index.html">Home</a>
+    <a href="nirfi.html">NIRFI™</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a class="btn btn-primary" href="contact.html">Request a Demo</a>
+  </div>
 </div>
 
 <main id="main">
@@ -65,105 +64,61 @@
     <div class="container">
       <div class="section-label">About</div>
       <h1>Toa Optics Co., Ltd.</h1>
-      <p>Toa Optics is a Tokyo-based company focused on compact near-infrared fluorescence imaging. We build products and workflows intended for research, training, and professional evaluation.</p>
+      <p>Toa Optics is a Tokyo-based company focused on compact near-infrared fluorescence imaging for research, training, and professional evaluation.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="about-grid">
-        <div>
+      <div class="about-layout">
+        <div class="about-copy">
           <div class="section-label">Mission</div>
-          <h2 class="section-title">Make fluorescence imaging easier to evaluate and easier to bring into real working environments.</h2>
-          <p class="section-sub" style="margin-bottom:20px;">Our current focus is compact hardware, direct PC-based capture, and lower-overhead setup for teams that do not want unnecessary complexity in early evaluation, training, or workflow review.</p>
-          <p class="section-sub">NIRFI™ is the clearest expression of that focus: a portable near-infrared fluorescence imaging system designed around compact size, USB power, and straightforward image capture.</p>
+          <h2 class="section-title">Making near-infrared fluorescence imaging more accessible for research, training, and professional evaluation.</h2>
+          <p>We focus on device formats and workflows that are easier to review, set up, and carry into practical working environments. NIRFI™ is our current product expression of that approach.</p>
         </div>
-        <div class="about-img">
-          <img src="images/nirfi-team.jpeg" alt="Toa Optics team and development environment" loading="lazy" />
-        </div>
+        <figure class="media-card">
+          <img src="images/nirfi-team.jpeg" width="2560" height="1910" alt="Toa Optics team and development environment" loading="lazy" />
+          <figcaption>
+            <strong>Focused product scope</strong>
+            Compact near-infrared fluorescence imaging and related optical systems.
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray">
+  <section class="section section--muted">
     <div class="container">
-      <div class="section-intro">
-        <div class="section-label">Recent Activity</div>
-        <h2 class="section-title">Fact-based signals that support trust.</h2>
-      </div>
-      <div class="trust-strip">
-        <div class="trust-item">
-          <strong>July 2025</strong>
-          <p>Selected for the MINATO Deeptech Startup Program 2025 in Tokyo.</p>
-        </div>
-        <div class="trust-item">
-          <strong>April 2025</strong>
-          <p>Exhibited at Laser World of Photonics 2025 in Munich, Germany.</p>
-        </div>
-        <div class="trust-item">
-          <strong>August 2025</strong>
-          <p>Exhibited at MEDICA 2025 in Dusseldorf, Germany.</p>
+      <div class="section-header section-header--stack">
+        <div>
+          <div class="section-label">Company Profile</div>
+          <h2 class="section-title">Core facts in one place.</h2>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-intro">
-        <div class="section-label">Company Profile</div>
-        <h2 class="section-title">Core information in one place.</h2>
-      </div>
-      <div class="profile-grid">
-        <article class="profile-card">
+      <div class="company-grid">
+        <article class="company-card">
           <h3>Company name</h3>
           <p>Toa Optics Co., Ltd. (東亜光学株式会社)</p>
         </article>
-        <article class="profile-card">
+        <article class="company-card">
           <h3>Location</h3>
           <p>2-28-1, Higashi-Azabu, Minato, Tokyo, Japan 106-0044</p>
         </article>
-        <article class="profile-card">
-          <h3>Focus area</h3>
+        <article class="company-card">
+          <h3>Business focus</h3>
           <p>Compact near-infrared fluorescence imaging and related optical systems.</p>
         </article>
-        <article class="profile-card">
-          <h3>Core product</h3>
-          <p>NIRFI™ — near-infrared fluorescence imaging.</p>
+        <article class="company-card">
+          <h3>Main product</h3>
+          <p>NIRFI™</p>
         </article>
-        <article class="profile-card">
-          <h3>Typical counterparties</h3>
-          <p>Research groups, universities, distributors, and professional organizations evaluating fluorescence workflows.</p>
+        <article class="company-card">
+          <h3>Typical inquiries</h3>
+          <p>Research groups, universities, distributors, and professional evaluation teams.</p>
         </article>
-        <article class="profile-card">
-          <h3>General inquiries</h3>
-          <p><a href="contact.html">Use the contact page</a> for demos, datasheets, or business discussions.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--gray">
-    <div class="container">
-      <div class="section-intro">
-        <div class="section-label">How We Work</div>
-        <h2 class="section-title">A focused company story instead of a broad catalog.</h2>
-      </div>
-      <div class="value-grid">
-        <article class="value-card">
-          <div class="value-index">01</div>
-          <h3>Focused scope</h3>
-          <p>We are centered on compact fluorescence imaging rather than presenting a wide range of unrelated technologies.</p>
-        </article>
-        <article class="value-card">
-          <div class="value-index">02</div>
-          <h3>Practical deployment mindset</h3>
-          <p>We emphasize device formats and workflows that are easier to review, carry, and set up in real environments.</p>
-        </article>
-        <article class="value-card">
-          <div class="value-index">03</div>
-          <h3>Open to collaboration</h3>
-          <p>We welcome conversations about distribution, research collaboration, and evaluation planning when there is a clear use case.</p>
+        <article class="company-card">
+          <h3>Contact</h3>
+          <p><a href="contact.html">Use the contact page</a> for product, demo, and partnership inquiries.</p>
         </article>
       </div>
     </div>
@@ -171,10 +126,37 @@
 
   <section class="section">
     <div class="container">
-      <div class="notice-card">
-        <div class="section-label">Important Note</div>
-        <h2 class="section-title">Product information should be reviewed together with region and intended use.</h2>
-        <p class="section-sub">NIRFI™ information on this site is provided for research, training, and professional evaluation. Availability, labeling, and regulatory status may vary by country and application.</p>
+      <div class="section-header section-header--stack">
+        <div>
+          <div class="section-label">Recent Activity</div>
+          <h2 class="section-title">Factual signals only.</h2>
+        </div>
+      </div>
+      <div class="activity-list">
+        <article class="activity-item">
+          <div class="activity-date">Jul 1, 2025</div>
+          <div class="activity-tag">Program</div>
+          <div class="activity-copy">
+            <strong>MINATO Deeptech Startup Program 2025</strong>
+            <p>Selected in Tokyo.</p>
+          </div>
+        </article>
+        <article class="activity-item">
+          <div class="activity-date">Apr 29, 2025</div>
+          <div class="activity-tag">Exhibition</div>
+          <div class="activity-copy">
+            <strong>Laser World of Photonics 2025</strong>
+            <p>Munich, Germany.</p>
+          </div>
+        </article>
+        <article class="activity-item">
+          <div class="activity-date">Aug 6, 2025</div>
+          <div class="activity-tag">Exhibition</div>
+          <div class="activity-copy">
+            <strong>MEDICA 2025</strong>
+            <p>Dusseldorf, Germany.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -183,11 +165,11 @@
     <div class="container">
       <div class="cta-panel">
         <div class="section-label">Contact</div>
-        <h2 class="section-title">Talk with us about product fit, demos, or partnership topics.</h2>
-        <p class="section-sub">A single inquiry flow now covers demo requests, technical questions, and early commercial discussions.</p>
-        <div class="cta-buttons">
-          <a href="contact.html" class="btn btn-primary">Request a Demo</a>
-          <a href="nirfi.html" class="btn btn-outline">View NIRFI™</a>
+        <h2 class="section-title">Talk with us about product fit, demonstrations, or partnership topics.</h2>
+        <p class="section-copy">The contact flow is shared across demo requests, technical questions, and commercial discussion.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="contact.html">Request a Demo</a>
+          <a class="btn btn-secondary" href="nirfi.html">View NIRFI™</a>
         </div>
       </div>
     </div>
@@ -198,8 +180,8 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Toa Optics" />
-        <p>Compact near-infrared fluorescence imaging for research, training, and professional evaluation.</p>
+        <img src="images/logo.png" width="488" height="72" alt="Toa Optics" />
+        <p>Advancing compact near-infrared fluorescence imaging for research, training, and professional evaluation.</p>
         <p class="footer-address">2-28-1, Higashi-Azabu, Minato, Tokyo, Japan 106-0044</p>
       </div>
       <div>
@@ -215,7 +197,7 @@
         <ul class="footer-links">
           <li><a href="about.html">About</a></li>
           <li><a href="news.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
         </ul>
       </div>
     </div>
@@ -223,7 +205,7 @@
       <span>© 2026 Toa Optics Co., Ltd. All rights reserved.</span>
       <a class="footer-language" href="jp/about.html">日本語</a>
     </div>
-    <p class="footer-disclaimer">NIRFI™ information on this site is provided for research, training, and professional use. Availability, labeling, and regulatory status may vary by country and intended application.</p>
+    <p class="footer-disclaimer">NIRFI™ information on this site is provided for research, training, and professional evaluation use. Availability, labeling, and regulatory status may vary by country and intended application.</p>
   </div>
 </footer>
 

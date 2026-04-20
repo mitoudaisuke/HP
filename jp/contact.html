@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>デモ依頼・お問い合わせ | 東亜光学</title>
-  <meta name="description" content="NIRFI™ のデモ依頼、資料請求、技術確認、販売相談はこちらからお問い合わせください。" />
+  <meta name="description" content="NIRFI™のデモ依頼、資料請求、価格確認、販売相談についてお問い合わせください。" />
   <link rel="canonical" href="https://toaoptics.com/jp/contact.html" />
   <link rel="alternate" hreflang="ja" href="https://toaoptics.com/jp/contact.html" />
   <link rel="alternate" hreflang="en" href="https://toaoptics.com/contact.html" />
@@ -15,32 +15,31 @@
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
 
-<nav class="nav">
+<nav class="nav" aria-label="主ナビゲーション">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="東亜光学 ホーム">
-      <img src="../images/logo.png" alt="東亜光学" />
+    <a class="nav-logo" href="index.html" aria-label="東亜光学 ホーム">
+      <img src="../images/logo.png" width="488" height="72" alt="東亜光学" />
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">ホーム</a></li>
       <li><a href="nirfi.html">NIRFI™</a></li>
       <li><a href="about.html">会社情報</a></li>
       <li><a href="news.html">ニュース</a></li>
-      <li><a href="contact.html">お問い合わせ</a></li>
     </ul>
-    <a href="contact.html" class="btn btn-primary nav-cta">デモを依頼する</a>
+    <a class="btn btn-primary nav-cta" href="contact.html">デモを問い合わせる</a>
     <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobile-menu">
-  <a href="index.html">ホーム</a>
-  <a href="nirfi.html">NIRFI™</a>
-  <a href="about.html">会社情報</a>
-  <a href="news.html">ニュース</a>
-  <a href="contact.html">お問い合わせ</a>
-  <a href="contact.html" class="btn btn-primary">デモを依頼する</a>
+<div class="mobile-menu" id="mobile-menu" hidden aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="index.html">ホーム</a>
+    <a href="nirfi.html">NIRFI™</a>
+    <a href="about.html">会社情報</a>
+    <a href="news.html">ニュース</a>
+    <a class="btn btn-primary" href="contact.html">デモを問い合わせる</a>
+  </div>
 </div>
 
 <main id="main">
@@ -48,7 +47,7 @@
     <div class="container">
       <div class="section-label">お問い合わせ</div>
       <h1>デモ依頼・お問い合わせ</h1>
-      <p>デモ依頼、資料請求、技術確認、販売相談をひとつのフォームに整理しました。</p>
+      <p>デモ依頼、資料請求、価格確認、販売相談をひとつの導線で受け付けます。</p>
     </div>
   </section>
 
@@ -56,62 +55,53 @@
     <div class="container">
       <div class="contact-reasons">
         <article class="contact-reason">
-          <h3>デモを依頼したい</h3>
-          <p>評価したい内容や、希望する確認方法をお知らせください。</p>
+          <h3>デモ依頼</h3>
+          <p>評価したい内容や確認したいポイントをお知らせください。</p>
         </article>
         <article class="contact-reason">
-          <h3>資料・技術情報を確認したい</h3>
-          <p>データシート、仕様、導入前の確認事項をご相談いただけます。</p>
+          <h3>資料・製品確認</h3>
+          <p>仕様資料、製品概要、ワークフロー適合性についてご相談いただけます。</p>
         </article>
         <article class="contact-reason">
-          <h3>販売・協業について相談したい</h3>
-          <p>代理店、販売、連携に関するご相談にも同じフォームで対応します。</p>
+          <h3>価格・販売相談</h3>
+          <p>販売、代理店、協業に関するご相談も同じフォームで受け付けます。</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray">
+  <section class="section section--muted">
     <div class="container">
       <div class="contact-grid">
-        <div>
+        <div class="contact-copy">
           <div class="section-label">送信前のご案内</div>
-          <h2 class="section-title">地域と用途があると、ご案内がスムーズです。</h2>
-          <p class="section-sub" style="margin-bottom:24px;">提供可否、表示、規制上の位置づけは国や用途によって異なる場合があります。地域と予定用途を添えていただくと、回答しやすくなります。</p>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="contact-detail-text">
-              <label>返信目安</label>
+          <h2 class="section-title">少しの情報で、回答しやすさが変わります。</h2>
+          <p>ご入力いただいた情報は、お問い合わせへの回答、製品デモ、資料提供、価格・提携に関するご連絡のために使用します。</p>
+          <div class="contact-detail-list">
+            <div class="contact-detail">
+              <strong>返信目安</strong>
               <span>通常3営業日以内</span>
             </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="contact-detail-text">
-              <label>所在地</label>
+            <div class="contact-detail">
+              <strong>所在地</strong>
               <span>〒106-0044 東京都港区東麻布2-28-1</span>
             </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div class="contact-detail">
+              <strong>地域情報</strong>
+              <span>国・地域と予定用途を添えていただくと、より適切にご案内できます。</span>
             </div>
-            <div class="contact-detail-text">
-              <label>窓口</label>
-              <span>デモ依頼、製品確認、販売相談は本ページのフォームをご利用ください。</span>
+            <div class="contact-detail">
+              <strong>プライバシー</strong>
+              <span><a href="privacy.html">プライバシーページ</a>で現在の取り扱い概要をご確認いただけます。</span>
             </div>
           </div>
         </div>
 
         <div class="contact-form-card">
           <div class="section-label">フォーム</div>
-          <h2 class="section-title" style="font-size:2rem;">必要事項をご入力ください。</h2>
-          <p class="section-sub" style="margin-bottom:24px;">項目数は絞っています。追加情報が必要な場合は、こちらからご連絡します。</p>
-          <form id="contact-form" action="https://formspree.io/f/xaqajlay" method="POST">
+          <h2 class="section-title">必要事項をご入力ください。</h2>
+          <p class="section-copy">必須項目は、回答に必要な内容だけに絞っています。</p>
+          <form id="contact-form" action="https://formspree.io/f/xaqajlay" method="POST" data-error-text="送信中に問題が発生しました。時間をおいて再度お試しください。" data-network-error-text="通信エラーが発生しました。接続をご確認のうえ再度お試しください。">
             <input type="hidden" name="_subject" value="New NIRFI inquiry from toaoptics.com (JP)" />
             <div class="form-group">
               <label for="inquiry-type">お問い合わせ種別 <span class="req">*</span></label>
@@ -119,8 +109,7 @@
                 <option value="">選択してください</option>
                 <option value="demo">デモ依頼</option>
                 <option value="datasheet">資料請求</option>
-                <option value="technical">技術確認</option>
-                <option value="procurement">導入・調達相談</option>
+                <option value="pricing">価格確認</option>
                 <option value="partner">販売・協業相談</option>
                 <option value="general">その他</option>
               </select>
@@ -128,21 +117,21 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="name">お名前 <span class="req">*</span></label>
-                <input type="text" id="name" name="name" placeholder="お名前" required />
+                <input id="name" name="name" type="text" required />
               </div>
               <div class="form-group">
                 <label for="email">メールアドレス <span class="req">*</span></label>
-                <input type="email" id="email" name="email" placeholder="name@example.com" required />
+                <input id="email" name="email" type="email" required />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="organization">所属先</label>
-                <input type="text" id="organization" name="organization" placeholder="大学、企業、代理店など" />
+                <input id="organization" name="organization" type="text" />
               </div>
               <div class="form-group">
                 <label for="country">国・地域 <span class="req">*</span></label>
-                <input type="text" id="country" name="country" placeholder="日本、ドイツ、米国など" required />
+                <input id="country" name="country" type="text" required />
               </div>
             </div>
             <div class="form-group">
@@ -158,28 +147,18 @@
             </div>
             <div class="form-group">
               <label for="message">お問い合わせ内容 <span class="req">*</span></label>
-              <textarea id="message" name="message" placeholder="確認したい内容や背景をご記入ください。" required></textarea>
+              <textarea id="message" name="message" required></textarea>
             </div>
             <label class="consent-check">
               <input type="checkbox" name="consent" required />
-              <span>入力した情報は、お問い合わせへの対応のためにのみ使用されることを理解しています。</span>
+              <span>入力した情報が、お問い合わせ対応および関連するご連絡に利用されることを理解しています。</span>
             </label>
-            <p class="form-privacy">地域と予定用途がわかると、回答の精度が上がります。</p>
-            <button type="submit" class="btn btn-primary" data-default-text="送信する" style="width:100%; justify-content:center;">送信する</button>
+            <p class="form-note">本サイト上のNIRFI™情報は、研究・教育・専門評価用途を目的としたものです。</p>
+            <button class="btn btn-primary" type="submit" data-default-text="送信する" data-loading-text="送信中..." style="width:100%;">送信する</button>
             <div id="form-error" class="form-error" role="alert"></div>
-            <div id="form-success" class="form-success">お問い合わせを受け付けました。通常3営業日以内にご返信します。</div>
+            <div id="form-success" class="form-success">お問い合わせを受け付けました。</div>
           </form>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="notice-card">
-        <div class="section-label">重要事項</div>
-        <h2 class="section-title">提供可否や規制上の位置づけは地域ごとに異なる場合があります。</h2>
-        <p class="section-sub">本サイトでは NIRFI™ を研究・教育・専門評価向けに案内しています。お問い合わせ時には、国・地域と予定用途をお知らせください。</p>
       </div>
     </div>
   </section>
@@ -189,8 +168,8 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="../images/logo.png" alt="東亜光学" />
-        <p>研究・教育・専門評価向けの、コンパクトな近赤外蛍光イメージング。</p>
+        <img src="../images/logo.png" width="488" height="72" alt="東亜光学" />
+        <p>研究・教育・専門評価に向けた、コンパクトな近赤外蛍光イメージング。</p>
         <p class="footer-address">〒106-0044 東京都港区東麻布2-28-1</p>
       </div>
       <div>
@@ -198,7 +177,7 @@
         <ul class="footer-links">
           <li><a href="nirfi.html">NIRFI™</a></li>
           <li><a href="nirfi.html#specs">仕様</a></li>
-          <li><a href="contact.html">デモ依頼</a></li>
+          <li><a href="contact.html">デモを問い合わせる</a></li>
         </ul>
       </div>
       <div>
@@ -206,7 +185,7 @@
         <ul class="footer-links">
           <li><a href="about.html">会社情報</a></li>
           <li><a href="news.html">ニュース</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシー</a></li>
         </ul>
       </div>
     </div>
@@ -214,7 +193,7 @@
       <span>© 2026 東亜光学株式会社 All rights reserved.</span>
       <a class="footer-language" href="../contact.html">English</a>
     </div>
-    <p class="footer-disclaimer">本サイト上の NIRFI™ 情報は、研究・教育・専門用途を目的としたものです。提供可否、表示、規制上の位置づけは国や想定用途によって異なる場合があります。</p>
+    <p class="footer-disclaimer">本サイト上のNIRFI™情報は、研究・教育・専門評価用途を目的としたものです。提供可否、表示、規制上の位置づけは国や想定用途によって異なる場合があります。</p>
   </div>
 </footer>
 
