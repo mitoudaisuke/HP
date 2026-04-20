@@ -887,7 +887,7 @@ tbody td:last-child { color: var(--gray-4); }
   font-size: 1.4rem;
   color: var(--cyan);
 }
-.faq-item[open] summary::after { content: "−"; }
+.faq-item[open] summary::after { content: "-"; }
 .faq-item p {
   padding: 0 24px 22px;
   color: var(--gray-4);
