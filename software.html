@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software</title>
+  <meta name="description" content="Download the NIRFI application for evaluation and testing. Manual macOS Apple Silicon downloads are available from Toa Optics." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Toa Optics" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="nirfi.html">NIRFI™</a></li>
+      <li><a href="software.html">Software</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav-cta">Request Info</a>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="nirfi.html">NIRFI™</a>
+  <a href="software.html">Software</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:8px;">Request Info</a>
+</div>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label">Software</div>
+    <h1>Software</h1>
+    <p>Download the NIRFI application for evaluation and testing on supported macOS Apple Silicon systems.</p>
+  </div>
+</section>
+
+<!-- ── Product Download ── -->
+<section class="section">
+  <div class="container">
+    <div class="spotlight-inner">
+      <div class="fade-up">
+        <div class="section-label">NIRFI</div>
+        <h2 class="section-title">NIRFI Application</h2>
+        <p class="section-sub">
+          Desktop software for connecting to NIRFI, viewing near-infrared fluorescence images, and supporting evaluation workflows.
+          This page is the manual download location for current testing builds.
+        </p>
+        <div class="specs-mini">
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">Latest version</span>
+            <span class="spec-val">0.1.0</span>
+          </div>
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">Platform</span>
+            <span class="spec-val">macOS Apple Silicon</span>
+          </div>
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">Update mode</span>
+            <span class="spec-val">Manual download and replacement</span>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI.dmg" class="btn btn-primary">Download .dmg</a>
+          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest" class="btn btn-outline-navy">GitHub Release</a>
+        </div>
+      </div>
+      <div class="contact-form-card fade-up fade-up-delay-1">
+        <h3 style="font-size:1.2rem; font-weight:700; color:var(--dark); margin-bottom:16px;">Distribution Status</h3>
+        <div class="company-info-grid" style="grid-template-columns:1fr; margin-top:0;">
+          <div class="info-item">
+            <div class="info-label">Use</div>
+            <div class="info-value">Evaluation and testing distribution only</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Medical-device release</div>
+            <div class="info-value">Not a formal medical-device software release</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Signing / notarization</div>
+            <div class="info-value">Deferred; not enabled in this distribution</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Update metadata</div>
+            <div class="info-value"><a href="latest.json">/latest.json</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Manual Installation ── -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="fade-up" style="max-width:700px; margin-bottom:48px;">
+      <div class="section-label">Install</div>
+      <h2 class="section-title">Manual Installation</h2>
+      <p class="section-sub">NIRFI does not perform automatic in-app updates at this stage. Install or update it manually from this page.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade-up fade-up-delay-1">
+        <div class="step-num">1</div>
+        <div class="step-title">Download</div>
+        <p class="step-desc">Download <strong>NIRFI.dmg</strong> for the standard macOS Apple Silicon installer package.</p>
+      </div>
+      <div class="step fade-up fade-up-delay-2">
+        <div class="step-num">2</div>
+        <div class="step-title">Replace</div>
+        <p class="step-desc">Open the disk image and replace the existing NIRFI application in your Applications folder.</p>
+      </div>
+      <div class="step fade-up fade-up-delay-3">
+        <div class="step-num">3</div>
+        <div class="step-title">Launch</div>
+        <p class="step-desc">Launch NIRFI again and confirm the version in the application. Keep the previous download if rollback testing is required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Update Behavior ── -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="fade-up">
+        <div class="section-label">Updates</div>
+        <h2 class="section-title">Manual Update Behavior</h2>
+        <p class="section-sub">
+          Future versions of the NIRFI app may read <a href="latest.json">/latest.json</a> to notify users that a newer version is available.
+          The app should direct users back to this software download page rather than installing updates automatically.
+        </p>
+      </div>
+      <div class="fade-up fade-up-delay-1">
+        <div class="features-grid" style="grid-template-columns:1fr; margin-top:0;">
+          <div class="feature-card">
+            <div class="feature-title">Settings Retention</div>
+            <p class="feature-desc">
+              App settings should normally remain when replacing the app, assuming the app name and application data path are unchanged.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-title">No Auto Updater</div>
+            <p class="feature-desc">
+              autoUpdater, signing, and notarization workflows are not part of this release route.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Release Notes ── -->
+<section class="section section--gray" id="nirfi-release-notes">
+  <div class="container">
+    <div class="fade-up" style="max-width:700px; margin-bottom:32px;">
+      <div class="section-label">Release Notes</div>
+      <h2 class="section-title">NIRFI 0.1.0</h2>
+      <p class="section-sub">Initial evaluation and testing distribution for macOS Apple Silicon.</p>
+    </div>
+    <div class="specs-table-wrap fade-up">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Version</td>
+            <td>0.1.0</td>
+          </tr>
+          <tr>
+            <td>Platform</td>
+            <td>macOS Apple Silicon / arm64</td>
+          </tr>
+          <tr>
+            <td>Package names</td>
+            <td>NIRFI.dmg</td>
+          </tr>
+          <tr>
+            <td>Distribution note</td>
+            <td>Provided for evaluation and testing. This is not a formal medical-device software release.</td>
+          </tr>
+          <tr>
+            <td>Source repository</td>
+            <td><a href="https://github.com/mitoudaisuke/NIRFI">github.com/mitoudaisuke/NIRFI</a></td>
+          </tr>
+          <tr>
+            <td>Release repository</td>
+            <td><a href="https://github.com/mitoudaisuke/NIRFI-RELEASE">github.com/mitoudaisuke/NIRFI-RELEASE</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="fade-up">
+      <h2 class="section-title" style="color:var(--dark); text-align:center;">Questions About NIRFI?</h2>
+      <p class="section-sub" style="text-align:center; margin:0 auto 36px;">Contact Toa Optics for evaluation access, device setup, or compatibility questions.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        <a href="nirfi.html" class="btn btn-outline">View NIRFI™</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Toa Optics" />
+        <p>Advancing medical imaging through compact, accessible near-infrared fluorescence technology.</p>
+        <p style="margin-top:12px; font-size:0.82rem;">2-28-1, Higashi-Azabu, Minato, Tokyo, Japan 106-0044</p>
+      </div>
+      <div>
+        <div class="footer-heading">Product</div>
+        <ul class="footer-links">
+          <li><a href="nirfi.html">NIRFI™</a></li>
+          <li><a href="software.html">Software</a></li>
+          <li><a href="#nirfi-release-notes">Release Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="jp/index.html">日本語版 ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Toa Optics Co., Ltd. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer-disclaimer">NIRFI™ is intended for research and professional use. Regulatory status may vary by country. For clinical applications, consult applicable local regulations.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

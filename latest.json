@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "productName": "NIRFI",
+  "appId": "com.toaoptics.nirfi",
+  "channel": "stable",
+  "latestVersion": "0.1.0",
+  "releasedAt": "2026-04-28T00:00:00+09:00",
+  "updateMode": "manual",
+  "manualInstallRequired": true,
+  "autoUpdateEnabled": false,
+  "downloadPageUrl": "https://toaoptics.com/software.html",
+  "releaseNotesUrl": "https://toaoptics.com/software.html#nirfi-release-notes",
+  "message": "A new version of NIRFI is available.",
+  "repositories": {
+    "source": "https://github.com/mitoudaisuke/NIRFI",
+    "release": "https://github.com/mitoudaisuke/NIRFI-RELEASE"
+  },
+  "platforms": {
+    "darwin-arm64": {
+      "supported": true,
+      "version": "0.1.0",
+      "architecture": "arm64",
+      "os": "macOS",
+      "fileName": "NIRFI.dmg",
+      "downloadUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI.dmg",
+      "releasePageUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest",
+      "minimumSupportedVersion": "0.1.0",
+      "installMethod": "manual-dmg",
+      "manualInstallRequired": true,
+      "autoUpdateEnabled": false,
+      "signingStatus": "deferred",
+      "notarizationStatus": "deferred",
+      "signed": false,
+      "notarized": false
+    }
+  }
+}
