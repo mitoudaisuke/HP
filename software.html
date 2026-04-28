@@ -65,8 +65,18 @@
           </div>
           <div class="spec-row">
             <div class="spec-dot"></div>
+            <span class="spec-key">Release</span>
+            <span class="spec-val">NIRFI Viewer Software v0.1.0</span>
+          </div>
+          <div class="spec-row">
+            <div class="spec-dot"></div>
             <span class="spec-key">Platform</span>
             <span class="spec-val">macOS Apple Silicon</span>
+          </div>
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">Asset</span>
+            <span class="spec-val">NIRFI.dmg, about 105 MB</span>
           </div>
           <div class="spec-row">
             <div class="spec-dot"></div>
@@ -75,7 +85,7 @@
           </div>
         </div>
         <div class="hero-buttons">
-          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI.dmg" class="btn btn-primary">Download .dmg</a>
+          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI.dmg" class="btn btn-primary">Download NIRFI.dmg</a>
           <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest" class="btn btn-outline-navy">GitHub Release</a>
         </div>
       </div>
@@ -92,7 +102,11 @@
           </div>
           <div class="info-item">
             <div class="info-label">Signing / notarization</div>
-            <div class="info-value">Deferred; not enabled in this distribution</div>
+            <div class="info-value">Not signed or notarized yet; intended for evaluation and testing</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Release tag</div>
+            <div class="info-value">v0.1.0</div>
           </div>
           <div class="info-item">
             <div class="info-label">Update metadata</div>
@@ -158,6 +172,12 @@
               autoUpdater, signing, and notarization workflows are not part of this release route.
             </p>
           </div>
+          <div class="feature-card">
+            <div class="feature-title">Download Asset</div>
+            <p class="feature-desc">
+              Use the NIRFI.dmg asset from the latest GitHub Release. GitHub source code zip and tar.gz archives are generated source archives, not application distribution assets.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -186,16 +206,28 @@
             <td>0.1.0</td>
           </tr>
           <tr>
+            <td>Release title</td>
+            <td>NIRFI Viewer Software v0.1.0</td>
+          </tr>
+          <tr>
+            <td>Release tag</td>
+            <td>v0.1.0</td>
+          </tr>
+          <tr>
             <td>Platform</td>
             <td>macOS Apple Silicon / arm64</td>
           </tr>
           <tr>
-            <td>Package names</td>
-            <td>NIRFI.dmg</td>
+            <td>Distribution asset</td>
+            <td>NIRFI.dmg, about 105 MB</td>
           </tr>
           <tr>
             <td>Distribution note</td>
             <td>Provided for evaluation and testing. This is not a formal medical-device software release.</td>
+          </tr>
+          <tr>
+            <td>Signing / notarization</td>
+            <td>Deferred; this build is not signed or notarized yet.</td>
           </tr>
           <tr>
             <td>Source repository</td>
