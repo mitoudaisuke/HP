@@ -64,3 +64,75 @@ form?.addEventListener('submit', async (e) => {
   btn.textContent = 'Send Message';
   btn.disabled = false;
 });
+
+// ── NIRFI release metadata ──
+const setText = (selector, text) => {
+  if (!text) return;
+  document.querySelectorAll(selector).forEach(el => {
+    el.textContent = text;
+  });
+};
+
+const platformLabel = (platformKey) => {
+  const labels = {
+    'darwin-arm64': 'macOS',
+    'win32-x64': 'Windows'
+  };
+  return labels[platformKey] || platformKey;
+};
+
+const formatSize = (asset) => {
+  if (asset.assetSizeDisplay) return asset.assetSizeDisplay;
+  if (Number.isFinite(asset.assetSizeBytes)) {
+    return `${(asset.assetSizeBytes / 1024 / 1024).toFixed(1)} MiB`;
+  }
+  return '';
+};
+
+const loadNirfiReleaseMetadata = async () => {
+  if (!document.querySelector('[data-nirfi-latest-version]')) return;
+
+  try {
+    const res = await fetch('latest.json', { cache: 'no-cache' });
+    if (!res.ok) return;
+    const metadata = await res.json();
+    const platforms = Object.entries(metadata.platforms || {})
+      .filter(([, asset]) => asset && asset.supported !== false && asset.fileName);
+
+    setText('[data-nirfi-latest-version]', metadata.latestVersion);
+    setText('[data-nirfi-release-title]', metadata.releaseTitle);
+    setText('[data-nirfi-release-tag]', metadata.releaseTag);
+    setText('[data-nirfi-release-heading]', metadata.latestVersion ? `NIRFI ${metadata.latestVersion}` : '');
+
+    if (platforms.length) {
+      setText('[data-nirfi-asset-list]', platforms.map(([, asset]) => asset.fileName).join('; '));
+      setText('[data-nirfi-file-size-list]', platforms
+        .map(([platformKey, asset]) => `${platformLabel(platformKey)}: ${formatSize(asset)}`)
+        .filter(item => !item.endsWith(': '))
+        .join(' / '));
+      setText('[data-nirfi-file-size-detail]', platforms
+        .map(([, asset]) => `${asset.fileName}: ${formatSize(asset)}`)
+        .filter(item => !item.endsWith(': '))
+        .join('; '));
+    }
+
+    document.querySelectorAll('[data-nirfi-download]').forEach(link => {
+      const platform = metadata.platforms?.[link.dataset.nirfiDownload];
+      if (!platform) return;
+      const url = platform.downloadUrl || platform.directAssetUrl;
+      if (url) link.href = url;
+      if (platform.fileName) link.textContent = `Download ${platform.fileName}`;
+    });
+
+    const releasePageUrl = platforms
+      .map(([, asset]) => asset.releasePageUrl)
+      .find(Boolean) || metadata.repositories?.release;
+    document.querySelectorAll('[data-nirfi-release-link]').forEach(link => {
+      if (releasePageUrl) link.href = releasePageUrl;
+    });
+  } catch {
+    // Keep the static fallback content if release metadata is unavailable.
+  }
+};
+
+loadNirfiReleaseMetadata();

@@ -1,0 +1,39 @@
+name: Update NIRFI latest.json
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - nirfi-release-published
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-latest-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Update latest.json from GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/update-latest-json.mjs
+
+      - name: Commit updated release metadata
+        run: |
+          if git diff --quiet -- latest.json; then
+            echo "latest.json is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add latest.json
+          git commit -m "Update NIRFI release metadata"
+          git push

@@ -61,12 +61,12 @@
           <div class="spec-row">
             <div class="spec-dot"></div>
             <span class="spec-key">Latest version</span>
-            <span class="spec-val">0.1.1</span>
+            <span class="spec-val" data-nirfi-latest-version>0.1.1</span>
           </div>
           <div class="spec-row">
             <div class="spec-dot"></div>
             <span class="spec-key">Release</span>
-            <span class="spec-val">NIRFI Viewer Software v0.1.1</span>
+            <span class="spec-val" data-nirfi-release-title>NIRFI Viewer Software v0.1.1</span>
           </div>
           <div class="spec-row">
             <div class="spec-dot"></div>
@@ -76,7 +76,12 @@
           <div class="spec-row">
             <div class="spec-dot"></div>
             <span class="spec-key">Asset</span>
-            <span class="spec-val">NIRFI-Mac-arm64.dmg and NIRFI-Windows-x64.zip</span>
+            <span class="spec-val" data-nirfi-asset-list>NIRFI-Mac-arm64.dmg and NIRFI-Windows-x64.zip</span>
+          </div>
+          <div class="spec-row">
+            <div class="spec-dot"></div>
+            <span class="spec-key">File size</span>
+            <span class="spec-val" data-nirfi-file-size-list>macOS: 104.5 MiB / Windows: 129.0 MiB</span>
           </div>
           <div class="spec-row">
             <div class="spec-dot"></div>
@@ -85,9 +90,9 @@
           </div>
         </div>
         <div class="hero-buttons">
-          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI-Mac-arm64.dmg" class="btn btn-primary">Download NIRFI-Mac-arm64.dmg</a>
-          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI-Windows-x64.zip" class="btn btn-primary">Download NIRFI-Windows-x64.zip</a>
-          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest" class="btn btn-outline-navy">GitHub Release</a>
+          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI-Mac-arm64.dmg" class="btn btn-primary" data-nirfi-download="darwin-arm64">Download NIRFI-Mac-arm64.dmg</a>
+          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI-Windows-x64.zip" class="btn btn-primary" data-nirfi-download="win32-x64">Download NIRFI-Windows-x64.zip</a>
+          <a href="https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest" class="btn btn-outline-navy" data-nirfi-release-link>GitHub Release</a>
         </div>
       </div>
       <div class="contact-form-card fade-up fade-up-delay-1">
@@ -107,7 +112,7 @@
           </div>
           <div class="info-item">
             <div class="info-label">Release tag</div>
-            <div class="info-value">v0.1.1</div>
+            <div class="info-value" data-nirfi-release-tag>v0.1.1</div>
           </div>
           <div class="info-item">
             <div class="info-label">Update metadata</div>
@@ -190,7 +195,7 @@
   <div class="container">
     <div class="fade-up" style="max-width:700px; margin-bottom:32px;">
       <div class="section-label">Release Notes</div>
-      <h2 class="section-title">NIRFI 0.1.1</h2>
+      <h2 class="section-title" data-nirfi-release-heading>NIRFI 0.1.1</h2>
       <p class="section-sub">Evaluation and testing distribution for macOS Apple Silicon and Windows x64.</p>
     </div>
     <div class="specs-table-wrap fade-up">
@@ -204,15 +209,15 @@
         <tbody>
           <tr>
             <td>Version</td>
-            <td>0.1.1</td>
+            <td data-nirfi-latest-version>0.1.1</td>
           </tr>
           <tr>
             <td>Release title</td>
-            <td>NIRFI Viewer Software v0.1.1</td>
+            <td data-nirfi-release-title>NIRFI Viewer Software v0.1.1</td>
           </tr>
           <tr>
             <td>Release tag</td>
-            <td>v0.1.1</td>
+            <td data-nirfi-release-tag>v0.1.1</td>
           </tr>
           <tr>
             <td>Platform</td>
@@ -220,7 +225,11 @@
           </tr>
           <tr>
             <td>Distribution asset</td>
-            <td>NIRFI-Mac-arm64.dmg; NIRFI-Windows-x64.zip</td>
+            <td data-nirfi-asset-list>NIRFI-Mac-arm64.dmg; NIRFI-Windows-x64.zip</td>
+          </tr>
+          <tr>
+            <td>File size</td>
+            <td data-nirfi-file-size-detail>NIRFI-Mac-arm64.dmg: 104.5 MiB; NIRFI-Windows-x64.zip: 129.0 MiB</td>
           </tr>
           <tr>
             <td>Distribution note</td>
