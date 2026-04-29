@@ -278,6 +278,42 @@ ul { list-style: none; }
   max-width: 480px;
 }
 .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+.platform-downloads {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.platform-download-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 220px;
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--gray-2);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.platform-name {
+  color: var(--dark);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.platform-meta {
+  margin-top: 6px;
+  color: var(--cyan);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.platform-note {
+  margin-top: 12px;
+  color: var(--gray-4);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
 .hero-image {
   display: flex;
   justify-content: center;
@@ -994,6 +1030,7 @@ textarea { resize: vertical; min-height: 140px; }
   .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
   .hero-image { order: -1; }
   .hero-buttons { justify-content: center; }
+  .platform-downloads { grid-template-columns: 1fr; }
   .hero-sub { margin: 0 auto 32px; }
   .spotlight-inner { grid-template-columns: 1fr; gap: 40px; }
   .product-hero-inner { grid-template-columns: 1fr; }
