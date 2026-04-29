@@ -3,10 +3,10 @@
   "productName": "NIRFI",
   "appId": "com.toaoptics.nirfi",
   "channel": "stable",
-  "latestVersion": "0.1.0",
-  "releaseTag": "v0.1.0",
-  "releaseTitle": "NIRFI Viewer Software v0.1.0",
-  "releasedAt": "2026-04-28T00:00:00+09:00",
+  "latestVersion": "0.1.1",
+  "releaseTag": "v0.1.1",
+  "releaseTitle": "NIRFI Viewer Software v0.1.1",
+  "releasedAt": "2026-04-29T01:23:11.433456Z",
   "updateMode": "manual",
   "autoUpdateEnabled": false,
   "downloadPageUrl": "https://st216367.static.jp/software.html",
@@ -19,7 +19,7 @@
   "platforms": {
     "darwin-arm64": {
       "supported": true,
-      "version": "0.1.0",
+      "version": "0.1.1",
       "fileName": "NIRFI.dmg",
       "assetType": "dmg",
       "downloadUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI.dmg",
