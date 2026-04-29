@@ -20,10 +20,10 @@
     "darwin-arm64": {
       "supported": true,
       "version": "0.1.1",
-      "fileName": "NIRFI.dmg",
+      "fileName": "NIRFI-Mac-arm64.dmg",
       "assetType": "dmg",
-      "downloadUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI.dmg",
-      "directAssetUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI.dmg",
+      "downloadUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI-Mac-arm64.dmg",
+      "directAssetUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI-Mac-arm64.dmg",
       "releasePageUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest",
       "minimumSupportedVersion": "0.1.0",
       "installMethod": "manual-dmg",
