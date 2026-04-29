@@ -9,8 +9,8 @@
   "releasedAt": "2026-04-29T01:23:11.433456Z",
   "updateMode": "manual",
   "autoUpdateEnabled": false,
-  "downloadPageUrl": "https://st216367.static.jp/software.html",
-  "releaseNotesUrl": "https://st216367.static.jp/software.html#nirfi-release-notes",
+  "downloadPageUrl": "https://toaoptics.com/software.html",
+  "releaseNotesUrl": "https://toaoptics.com/software.html#nirfi-release-notes",
   "message": "A new version of NIRFI is available.",
   "repositories": {
     "source": "https://github.com/mitoudaisuke/NIRFI",
