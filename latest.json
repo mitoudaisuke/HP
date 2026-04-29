@@ -29,6 +29,18 @@
       "installMethod": "manual-dmg",
       "signed": false,
       "notarized": false
+    },
+    "win32-x64": {
+      "supported": true,
+      "version": "0.1.1",
+      "fileName": "NIRFI-Windows-x64.zip",
+      "assetType": "zip",
+      "downloadUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI-Windows-x64.zip",
+      "directAssetUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest/download/NIRFI-Windows-x64.zip",
+      "releasePageUrl": "https://github.com/mitoudaisuke/NIRFI-RELEASE/releases/latest",
+      "minimumSupportedVersion": "0.1.0",
+      "installMethod": "manual-zip",
+      "signed": false
     }
   }
 }
