@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const RELEASE_API_URL = 'https://api.github.com/repos/mitoudaisuke/NIRFI-RELEASE/releases/latest';
+const RELEASE_REPO = 'mitoudaisuke/NIRFI-RELEASE';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const latestJsonPath = path.resolve(__dirname, '..', 'latest.json');
 
@@ -25,6 +25,26 @@ const platformByAssetName = {
 const formatMiB = (bytes) => `${(bytes / 1024 / 1024).toFixed(1)} MiB`;
 const versionFromTag = (tagName) => tagName.replace(/^v/i, '');
 
+function readExpectedVersion(argv) {
+  const versionArgIndex = argv.indexOf('--version');
+  const rawVersion = versionArgIndex >= 0 ? argv[versionArgIndex + 1] : process.env.NIRFI_RELEASE_VERSION;
+  const version = rawVersion?.trim();
+
+  if (!version || version.startsWith('-')) {
+    throw new Error('Usage: node tools/update-latest-json.mjs --version <package.json version>');
+  }
+
+  if (!/^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$/.test(version)) {
+    throw new Error(`Invalid NIRFI release version: ${version}`);
+  }
+
+  return version;
+}
+
+const expectedVersion = readExpectedVersion(process.argv.slice(2));
+const expectedReleaseTag = `v${expectedVersion}`;
+const releaseApiUrl = `https://api.github.com/repos/${RELEASE_REPO}/releases/tags/${expectedReleaseTag}`;
+
 const headers = {
   Accept: 'application/vnd.github+json',
   'User-Agent': 'toaoptics-hp-latest-json-updater'
@@ -34,19 +54,25 @@ if (process.env.GITHUB_TOKEN) {
   headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 }
 
-const res = await fetch(RELEASE_API_URL, { headers });
+const res = await fetch(releaseApiUrl, { headers });
 
 if (!res.ok) {
   throw new Error(`GitHub release API failed: ${res.status} ${res.statusText}`);
 }
 
 const release = await res.json();
+const releaseVersion = versionFromTag(release.tag_name);
+
+if (releaseVersion !== expectedVersion) {
+  throw new Error(`GitHub release tag mismatch: expected ${expectedReleaseTag}, got ${release.tag_name}`);
+}
+
 const current = JSON.parse(await readFile(latestJsonPath, 'utf8'));
 const next = {
   ...current,
-  latestVersion: versionFromTag(release.tag_name),
-  releaseTag: release.tag_name,
-  releaseTitle: release.name || `NIRFI Viewer Software ${release.tag_name}`,
+  latestVersion: expectedVersion,
+  releaseTag: expectedReleaseTag,
+  releaseTitle: release.name || `NIRFI Viewer Software ${expectedReleaseTag}`,
   releasedAt: release.published_at || release.created_at || current.releasedAt
 };
 
