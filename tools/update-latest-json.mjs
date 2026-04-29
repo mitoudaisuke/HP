@@ -25,13 +25,17 @@ const platformByAssetName = {
 const formatMiB = (bytes) => `${(bytes / 1024 / 1024).toFixed(1)} MiB`;
 const versionFromTag = (tagName) => tagName.replace(/^v/i, '');
 
-function readExpectedVersion(argv) {
+function readRequestedVersion(argv) {
   const versionArgIndex = argv.indexOf('--version');
   const rawVersion = versionArgIndex >= 0 ? argv[versionArgIndex + 1] : process.env.NIRFI_RELEASE_VERSION;
-  const version = rawVersion?.trim();
+  const version = rawVersion?.trim().replace(/^v/i, '');
 
-  if (!version || version.startsWith('-')) {
-    throw new Error('Usage: node tools/update-latest-json.mjs --version <package.json version>');
+  if (versionArgIndex >= 0 && (!version || version.startsWith('-'))) {
+    throw new Error('Usage: node tools/update-latest-json.mjs [--version <package.json version>]');
+  }
+
+  if (!version) {
+    return undefined;
   }
 
   if (!/^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$/.test(version)) {
@@ -41,9 +45,11 @@ function readExpectedVersion(argv) {
   return version;
 }
 
-const expectedVersion = readExpectedVersion(process.argv.slice(2));
-const expectedReleaseTag = `v${expectedVersion}`;
-const releaseApiUrl = `https://api.github.com/repos/${RELEASE_REPO}/releases/tags/${expectedReleaseTag}`;
+const requestedVersion = readRequestedVersion(process.argv.slice(2));
+const requestedReleaseTag = requestedVersion ? `v${requestedVersion}` : undefined;
+const releaseApiUrl = requestedReleaseTag
+  ? `https://api.github.com/repos/${RELEASE_REPO}/releases/tags/${requestedReleaseTag}`
+  : `https://api.github.com/repos/${RELEASE_REPO}/releases/latest`;
 
 const headers = {
   Accept: 'application/vnd.github+json',
@@ -63,16 +69,16 @@ if (!res.ok) {
 const release = await res.json();
 const releaseVersion = versionFromTag(release.tag_name);
 
-if (releaseVersion !== expectedVersion) {
-  throw new Error(`GitHub release tag mismatch: expected ${expectedReleaseTag}, got ${release.tag_name}`);
+if (requestedVersion && releaseVersion !== requestedVersion) {
+  throw new Error(`GitHub release tag mismatch: expected ${requestedReleaseTag}, got ${release.tag_name}`);
 }
 
 const current = JSON.parse(await readFile(latestJsonPath, 'utf8'));
 const next = {
   ...current,
-  latestVersion: expectedVersion,
-  releaseTag: expectedReleaseTag,
-  releaseTitle: release.name || `NIRFI Viewer Software ${expectedReleaseTag}`,
+  latestVersion: releaseVersion,
+  releaseTag: release.tag_name,
+  releaseTitle: release.name || `NIRFI Viewer Software ${release.tag_name}`,
   releasedAt: release.published_at || release.created_at || current.releasedAt
 };
 
@@ -85,6 +91,7 @@ for (const asset of release.assets || []) {
     ...previous,
     supported: true,
     version: next.latestVersion,
+    releaseTag: next.releaseTag,
     fileName: asset.name,
     assetType: platform.assetType,
     assetSizeBytes: asset.size,

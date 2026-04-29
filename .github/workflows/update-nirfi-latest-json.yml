@@ -2,6 +2,11 @@ name: Update NIRFI latest.json
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Optional NIRFI release version, for example 0.1.2'
+        required: false
+        type: string
   repository_dispatch:
     types:
       - nirfi-release-published
@@ -24,6 +29,7 @@ jobs:
       - name: Update latest.json from GitHub Release
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          NIRFI_RELEASE_VERSION: ${{ github.event.client_payload.version || inputs.version || '' }}
         run: node tools/update-latest-json.mjs
 
       - name: Commit updated release metadata
