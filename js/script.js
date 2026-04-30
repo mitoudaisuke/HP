@@ -81,6 +81,39 @@ const platformLabel = (platformKey) => {
   return labels[platformKey] || platformKey;
 };
 
+const formatPlatformVersionList = (platforms, fallbackVersion) => {
+  if (!platforms.length) return fallbackVersion || '';
+  return platforms
+    .map(([platformKey, asset]) => `${platformLabel(platformKey)} ${asset.version}`)
+    .join(' / ');
+};
+
+const formatPlatformReleaseTagList = (platforms, fallbackReleaseTag) => {
+  const tags = platforms
+    .map(([, asset]) => asset.releaseTag)
+    .filter(Boolean);
+
+  if (tags.length > 0 && new Set(tags).size === 1) {
+    return tags[0];
+  }
+
+  return platforms
+    .map(([platformKey, asset]) => `${platformLabel(platformKey)}: ${asset.releaseTag || fallbackReleaseTag}`)
+    .join(' / ');
+};
+
+const formatReleaseHeading = (platforms, fallbackVersion) => {
+  const versions = platforms
+    .map(([, asset]) => asset.version)
+    .filter(Boolean);
+
+  if (versions.length > 0 && new Set(versions).size === 1) {
+    return `NIRFI ${versions[0]}`;
+  }
+
+  return fallbackVersion ? 'NIRFI platform releases' : 'NIRFI releases';
+};
+
 const formatSize = (asset) => {
   if (asset.assetSizeDisplay) return asset.assetSizeDisplay;
   if (Number.isFinite(asset.assetSizeBytes)) {
@@ -99,10 +132,10 @@ const loadNirfiReleaseMetadata = async () => {
     const platforms = Object.entries(metadata.platforms || {})
       .filter(([, asset]) => asset && asset.supported !== false && asset.fileName);
 
-    setText('[data-nirfi-latest-version]', metadata.latestVersion);
+    setText('[data-nirfi-latest-version]', formatPlatformVersionList(platforms, metadata.latestVersion));
     setText('[data-nirfi-release-title]', metadata.releaseTitle);
-    setText('[data-nirfi-release-tag]', metadata.releaseTag);
-    setText('[data-nirfi-release-heading]', metadata.latestVersion ? `NIRFI ${metadata.latestVersion}` : '');
+    setText('[data-nirfi-release-tag]', formatPlatformReleaseTagList(platforms, metadata.releaseTag));
+    setText('[data-nirfi-release-heading]', formatReleaseHeading(platforms, metadata.latestVersion));
 
     if (platforms.length) {
       setText('[data-nirfi-asset-list]', platforms.map(([, asset]) => asset.fileName).join('; '));
