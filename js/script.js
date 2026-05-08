@@ -122,11 +122,16 @@ const formatSize = (asset) => {
   return '';
 };
 
+const scriptUrl = document.currentScript?.src || document.querySelector('script[src*="js/script.js"]')?.src;
+const latestJsonUrl = scriptUrl
+  ? new URL('../latest.json', scriptUrl)
+  : new URL('latest.json', window.location.href);
+
 const loadNirfiReleaseMetadata = async () => {
   if (!document.querySelector('[data-nirfi-latest-version]')) return;
 
   try {
-    const res = await fetch('latest.json', { cache: 'no-cache' });
+    const res = await fetch(latestJsonUrl, { cache: 'no-cache' });
     if (!res.ok) return;
     const metadata = await res.json();
     const platforms = Object.entries(metadata.platforms || {})
